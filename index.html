@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Euchre Book — QC Euchre Club Stats</title>
+<meta name="description" content="Match history and statistics for the Quad Cities Euchre Club.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div>
+      <h1>The Euchre Book</h1>
+      <p>Match history &amp; stats for the Quad Cities Euchre Club</p>
+      <nav class="tabs">
+        <a href="#overview">Overview</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#teammates">Teammates</a>
+        <a href="#profile">Player Profile</a>
+        <a href="#games">Game Log</a>
+      </nav>
+    </div>
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Toggle theme</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p class="section-sub">Club-wide totals across every recorded match.</p>
+    <div class="tiles" id="overview-tiles"></div>
+    <div class="card">
+      <h3 style="margin:0 0 10px;font-size:0.85rem;color:var(--text-secondary)">Games played by season</h3>
+      <div class="chart-wrap"><svg id="season-chart" class="chart"></svg></div>
+    </div>
+  </section>
+
+  <section id="leaderboard">
+    <h2>Leaderboard</h2>
+    <p class="section-sub">Win percentage and point differential by player. Click a column to sort, click a row to view that player's profile.</p>
+    <div class="card">
+      <h3 style="margin:0 0 10px;font-size:0.85rem;color:var(--text-secondary)">Top win % (min. games below)</h3>
+      <div class="chart-wrap"><svg id="winpct-chart" class="chart"></svg></div>
+    </div>
+    <br>
+    <div class="controls">
+      <input type="search" id="lb-search" placeholder="Search player…">
+      <label>Min. games
+        <select id="lb-mingames">
+          <option value="1">1+</option>
+          <option value="3">3+</option>
+          <option value="5" selected>5+</option>
+          <option value="10">10+</option>
+          <option value="20">20+</option>
+        </select>
+      </label>
+      <span class="pill" id="lb-count"></span>
+    </div>
+    <div class="card table-scroll">
+      <table id="leaderboard-table">
+        <thead>
+          <tr>
+            <th class="name-cell" data-key="name">Player</th>
+            <th data-key="games">Games</th>
+            <th data-key="wins">W</th>
+            <th data-key="losses">L</th>
+            <th data-key="winPct" class="sorted">Win %</th>
+            <th data-key="avgDiff">Avg Pt Diff</th>
+            <th data-key="totalDiff">Total Pt Diff</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="teammates">
+    <h2>Successful Teammates</h2>
+    <p class="section-sub">Every partnership that has played together, ranked by win rate as a pair.</p>
+    <div class="controls">
+      <input type="search" id="tm-search" placeholder="Search player…">
+      <label>Min. games together
+        <select id="tm-mingames">
+          <option value="1">1+</option>
+          <option value="2" selected>2+</option>
+          <option value="3">3+</option>
+          <option value="5">5+</option>
+        </select>
+      </label>
+      <span class="pill" id="tm-count"></span>
+    </div>
+    <div class="card table-scroll">
+      <table id="teammates-table">
+        <thead>
+          <tr>
+            <th class="name-cell" data-key="pair">Pair</th>
+            <th data-key="games">Games</th>
+            <th data-key="wins">W</th>
+            <th data-key="losses">L</th>
+            <th data-key="winPct" class="sorted">Win %</th>
+            <th data-key="avgDiff">Avg Pt Diff</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="profile">
+    <h2>Player Profile</h2>
+    <p class="section-sub">Pick a player to see their full record, best teammates, toughest opponents, and point-differential trend.</p>
+    <div class="controls">
+      <label>Player
+        <select id="profile-select"></select>
+      </label>
+    </div>
+    <div id="profile-content"></div>
+  </section>
+
+  <section id="games">
+    <h2>Game Log</h2>
+    <p class="section-sub">Every match on record, most recent first.</p>
+    <div class="controls">
+      <input type="search" id="gl-search" placeholder="Search player…">
+      <label>Season
+        <select id="gl-season"><option value="">All seasons</option></select>
+      </label>
+      <span class="pill" id="gl-count"></span>
+    </div>
+    <div class="card table-scroll">
+      <table id="games-table">
+        <thead>
+          <tr>
+            <th data-key="date" class="sorted">Date</th>
+            <th data-key="season">Season</th>
+            <th class="name-cell">Pair 1</th>
+            <th data-key="score1">Score</th>
+            <th class="name-cell">Pair 2</th>
+            <th data-key="score2">Score</th>
+            <th class="name-cell">Winner</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="show-more"><button id="gl-more" type="button">Show more games</button></div>
+  </section>
+
+  <footer>
+    Data sourced from the club's Euchre_Book spreadsheet · 403 recorded games since September 2024<br>
+    Generated statistics, not officiated results.
+  </footer>
+
+</div>
+
+<div id="chart-tooltip" class="chart-tooltip"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
