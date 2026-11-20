@@ -52,6 +52,9 @@
 
 * { box-sizing: border-box; }
 
+/* Everything is sized in rem, so this one value scales all text, tiles and tables */
+/* html { font-size: 112.5%; } */
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -61,7 +64,7 @@ body {
 }
 
 .wrap {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px 64px;
 }
@@ -105,6 +108,7 @@ nav.tabs a {
   border-radius: 6px;
 }
 nav.tabs a:hover { background: var(--surface-2); color: var(--text-primary); }
+nav.tabs a[aria-current="page"] { background: var(--surface-2); color: var(--text-primary); box-shadow: inset 0 -2px 0 var(--series-1); }
 
 #theme-toggle {
   border: 1px solid var(--border);
@@ -274,6 +278,16 @@ svg.chart .line-path { fill: none; stroke: var(--series-1); stroke-width: 2; str
 svg.chart .area-path { fill: var(--series-1); opacity: 0.10; }
 svg.chart .end-dot { fill: var(--series-1); stroke: var(--surface-1); stroke-width: 2; }
 svg.chart .zero-line { stroke: var(--baseline); stroke-width: 1; }
+svg.chart .ref-line { stroke: var(--baseline); stroke-width: 1; stroke-dasharray: 4 3; }
+svg.chart .season-line { stroke: var(--gridline); stroke-width: 1; }
+svg.chart .band-path { fill: var(--series-1); opacity: 0.14; }
+svg.chart .bar-dim { opacity: 0.4; }
+
+.card-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.seg-btn { background: transparent; border: 0; padding: 4px 12px; font: inherit; font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; }
+.seg-btn + .seg-btn { border-left: 1px solid var(--border); }
+.seg-btn.active { background: var(--series-1); color: #fff; }
 
 .chart-tooltip {
   position: absolute;

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player Profile — The Euchre Book</title>
+<meta name="description" content="Match history and statistics for the Quad Cities Euchre Club.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+
+<header class="site-header">
+  <div class="wrap">
+    <div>
+      <h1>The Euchre Book</h1>
+      <p>Match history &amp; stats for the Quad Cities Euchre Club</p>
+      <nav class="tabs">
+        <a href="index.html">Overview &amp; Leaderboard</a>
+        <a href="teammates.html">Teammates</a>
+        <a href="profile.html" aria-current="page">Player Profile</a>
+        <a href="games.html">Game Log</a>
+      </nav>
+    </div>
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Toggle theme</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="profile">
+    <h2>Player Profile</h2>
+    <p class="section-sub">Pick a player to see their full record, best teammates, toughest opponents, and point-differential trend.</p>
+    <div class="controls">
+      <label>Player
+        <select id="profile-select"></select>
+      </label>
+    </div>
+    <div id="profile-content"></div>
+  </section>
+
+  <footer>
+    Data sourced from the club's Euchre_Book spreadsheet · <span id="footer-count">…</span> recorded games since September 2024.
+  </footer>
+
+</main>
+
+<div id="chart-tooltip" class="chart-tooltip"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

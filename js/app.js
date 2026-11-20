@@ -56,7 +56,7 @@
       init(games);
     })
     .catch((err) => {
-      document.querySelector(".wrap").insertAdjacentHTML(
+      document.querySelector("main").insertAdjacentHTML(
         "afterbegin",
         `<p class="empty-state">Couldn't load game data (${err.message}). If you're viewing this from a local file, serve it over http:// instead (e.g. <code>python -m http.server</code>).</p>`
       );
@@ -65,11 +65,21 @@
   function init(games) {
     const { playerStats, partnerStats, opponentStats, seasonCounts } = computeStats(games);
 
-    renderOverview(games, playerStats, seasonCounts);
-    renderLeaderboard(playerStats);
-    renderTeammates(partnerStats);
-    renderProfile(playerStats, partnerStats, opponentStats, games);
-    renderGameLog(games);
+    const footerCount = document.getElementById("footer-count");
+    if (footerCount) footerCount.textContent = games.length;
+
+    // each page only renders the sections it contains
+    const page = document.body.dataset.page;
+    if (page === "overview") {
+      renderOverview(games, playerStats, seasonCounts);
+      renderLeaderboard(playerStats);
+    } else if (page === "teammates") {
+      renderTeammates(partnerStats);
+    } else if (page === "profile") {
+      renderProfile(playerStats, partnerStats, opponentStats, games);
+    } else if (page === "games") {
+      renderGameLog(games);
+    }
   }
 
   // ---------- stats computation ----------
@@ -103,13 +113,13 @@
         const p = ensurePlayer(name);
         p.games++; p.wins += win1 ? 1 : 0; p.losses += win1 ? 0 : 1;
         p.pointsFor += g.score1; p.pointsAgainst += g.score2; p.diffSum += diff1;
-        p.history.push({ date: g.dateObj, diff: diff1, win: win1 });
+        p.history.push({ date: g.dateObj, diff: diff1, win: win1, season: g.season });
       }
       for (const name of g.pair2) {
         const p = ensurePlayer(name);
         p.games++; p.wins += win1 ? 0 : 1; p.losses += win1 ? 1 : 0;
         p.pointsFor += g.score2; p.pointsAgainst += g.score1; p.diffSum += -diff1;
-        p.history.push({ date: g.dateObj, diff: -diff1, win: !win1 });
+        p.history.push({ date: g.dateObj, diff: -diff1, win: !win1, season: g.season });
       }
 
       // partnerships
@@ -185,7 +195,7 @@
     const valueFmt = opts.valueFmt || ((v) => String(v));
     const W = svg.parentElement.clientWidth || 600;
     const H = opts.height || 220;
-    const marginL = 34, marginR = 12, marginT = 16, marginB = 34;
+    const marginL = 40, marginR = 12, marginT = 16, marginB = 34;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", H);
@@ -237,7 +247,7 @@
     const valueFmt = opts.valueFmt || ((v) => String(v));
     const W = svg.parentElement.clientWidth || 600;
     const rowH = 26;
-    const marginL = 90, marginR = 46, marginT = 8, marginB = 8;
+    const marginL = 100, marginR = 54, marginT = 8, marginB = 8;
     const H = data.length * rowH + marginT + marginB;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
     svg.setAttribute("width", "100%");
@@ -279,7 +289,7 @@
     opts = opts || {};
     const W = svg.parentElement.clientWidth || 600;
     const H = opts.height || 180;
-    const marginL = 36, marginR = 14, marginT = 16, marginB = 24;
+    const marginL = 44, marginR = 14, marginT = 16, marginB = 28;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", H);
@@ -330,6 +340,173 @@
     const lastLabel = el("text", { x: xScale(points.length - 1), y: yScale(last.y) - 10, class: "bar-label", "text-anchor": "end" });
     lastLabel.textContent = fmtSignedInt(last.y);
     svg.appendChild(lastLabel);
+  }
+
+  // ---------- progress (improvement over time) ----------
+  const MIN_GAMES_FOR_PROGRESS = 10;   // below this, trend charts are mostly noise
+  const MIN_GAMES_FOR_SEASON = 8;      // seasons with fewer games are dimmed
+  const ROLLING_WINDOWS = [10, 15, 25];
+  const DEFAULT_ROLLING_WINDOW = 15;
+
+  // 95% Wilson score interval for a win rate
+  function wilson(wins, n) {
+    const z = 1.96, p = wins / n;
+    const denom = 1 + (z * z) / n;
+    const center = (p + (z * z) / (2 * n)) / denom;
+    const half = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / denom;
+    return { lo: Math.max(0, center - half), hi: Math.min(1, center + half) };
+  }
+
+  // rolling win % over the last `win` games; x-axis is the player's game number
+  function computeRolling(history, win) {
+    const startAt = Math.min(5, win); // first point once there are a few games
+    const pts = [];
+    for (let i = startAt - 1; i < history.length; i++) {
+      const slice = history.slice(Math.max(0, i - win + 1), i + 1);
+      const wins = slice.filter((h) => h.win).length;
+      const ci = wilson(wins, slice.length);
+      pts.push({ idx: i, game: i + 1, date: history[i].date, season: history[i].season,
+                 n: slice.length, wins, pct: wins / slice.length, lo: ci.lo, hi: ci.hi });
+    }
+    return pts;
+  }
+
+  function drawRollingChart(svg, history, win) {
+    const pts = computeRolling(history, win);
+    const W = svg.parentElement.clientWidth || 600;
+    const H = 220;
+    const marginL = 46, marginR = 14, marginT = 18, marginB = 26;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", H);
+    svg.innerHTML = "";
+
+    const plotW = W - marginL - marginR;
+    const plotH = H - marginT - marginB;
+    const total = history.length;
+    const xScale = (idx) => marginL + (total === 1 ? plotW / 2 : (idx / (total - 1)) * plotW);
+    const yScale = (v) => marginT + plotH - v * plotH;
+
+    // gridlines + 50% reference
+    [0, 0.25, 0.5, 0.75, 1].forEach((v) => {
+      const y = yScale(v);
+      svg.appendChild(el("line", { x1: marginL, x2: W - marginR, y1: y, y2: y, class: v === 0.5 ? "ref-line" : "gridline" }));
+      const t = el("text", { x: marginL - 8, y: y + 3, class: "tick-label", "text-anchor": "end" });
+      t.textContent = Math.round(v * 100) + "%";
+      svg.appendChild(t);
+    });
+
+    // season boundaries
+    let lastLabelX = -Infinity;
+    for (let i = 1; i < total; i++) {
+      if (history[i].season !== history[i - 1].season) {
+        const x = (xScale(i - 1) + xScale(i)) / 2;
+        svg.appendChild(el("line", { x1: x, x2: x, y1: marginT, y2: marginT + plotH, class: "season-line" }));
+        if (x - lastLabelX > 56) {
+          const t = el("text", { x: x + 3, y: marginT + 9, class: "tick-label" });
+          t.textContent = history[i].season;
+          svg.appendChild(t);
+          lastLabelX = x;
+        }
+      }
+    }
+
+    // x-axis ticks: first and last game
+    [[0, "start"], [total - 1, "end"]].forEach(([idx, anchor]) => {
+      const t = el("text", { x: xScale(idx), y: H - 8, class: "tick-label", "text-anchor": anchor });
+      t.textContent = "Game " + (idx + 1);
+      svg.appendChild(t);
+    });
+
+    // confidence band
+    const upper = pts.map((p) => `${xScale(p.idx)},${yScale(p.hi)}`);
+    const lower = pts.map((p) => `${xScale(p.idx)},${yScale(p.lo)}`).reverse();
+    svg.appendChild(el("path", { d: "M" + upper.concat(lower).join(" L") + " Z", class: "band-path" }));
+
+    // line
+    const line = pts.map((p, i) => (i === 0 ? "M" : "L") + xScale(p.idx) + "," + yScale(p.pct)).join(" ");
+    svg.appendChild(el("path", { d: line, class: "line-path" }));
+
+    // hover: one vertical slice per point
+    const slot = total > 1 ? plotW / (total - 1) : plotW;
+    pts.forEach((p) => {
+      const x = xScale(p.idx);
+      const hit = el("rect", { x: x - slot / 2, y: marginT, width: slot, height: plotH, class: "chart-hover-target" });
+      hit.addEventListener("mousemove", (evt) => {
+        showTooltip(evt, `<strong>Game ${p.game}</strong> · ${fmtDate(p.date)}<br>Last ${p.n}: ${p.wins}-${p.n - p.wins} (${fmtPct(p.pct)})<br><span style='color:var(--text-muted)'>95% range ${fmtPct(p.lo)}–${fmtPct(p.hi)}</span>`);
+        moveTooltip(evt);
+      });
+      hit.addEventListener("mouseleave", hideTooltip);
+      svg.appendChild(hit);
+    });
+
+    const last = pts[pts.length - 1];
+    svg.appendChild(el("circle", { cx: xScale(last.idx), cy: yScale(last.pct), r: 4, class: "end-dot" }));
+    const lbl = el("text", { x: xScale(last.idx), y: yScale(last.pct) - 10, class: "bar-label", "text-anchor": "end" });
+    lbl.textContent = fmtPct(last.pct);
+    svg.appendChild(lbl);
+  }
+
+  // per-season win % bars (50% reference line), thin seasons dimmed
+  function drawSeasonProgress(svg, history) {
+    const bySeason = new Map();
+    for (const h of history) {
+      if (!bySeason.has(h.season)) bySeason.set(h.season, { season: h.season, games: 0, wins: 0, diffSum: 0 });
+      const s = bySeason.get(h.season);
+      s.games++; s.wins += h.win ? 1 : 0; s.diffSum += h.diff;
+    }
+    const data = [...bySeason.values()].sort((a, b) => seasonSortKey(a.season) - seasonSortKey(b.season));
+
+    const W = svg.parentElement.clientWidth || 600;
+    const H = 230;
+    const marginL = 46, marginR = 12, marginT = 18, marginB = 58;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", H);
+    svg.innerHTML = "";
+
+    const plotW = W - marginL - marginR;
+    const plotH = H - marginT - marginB;
+    const baseY = marginT + plotH;
+    const yScale = (v) => baseY - v * plotH;
+
+    [0, 0.5, 1].forEach((v) => {
+      const y = yScale(v);
+      svg.appendChild(el("line", { x1: marginL, x2: W - marginR, y1: y, y2: y, class: v === 0.5 ? "ref-line" : "gridline" }));
+      const t = el("text", { x: marginL - 8, y: y + 3, class: "tick-label", "text-anchor": "end" });
+      t.textContent = Math.round(v * 100) + "%";
+      svg.appendChild(t);
+    });
+
+    const slot = plotW / data.length;
+    const barW = Math.min(44, slot * 0.6);
+    data.forEach((s, i) => {
+      const cx = marginL + slot * i + slot / 2;
+      const pct = s.wins / s.games;
+      const thin = s.games < MIN_GAMES_FOR_SEASON;
+      const path = el("path", { d: roundedTopBarPath(cx - barW / 2, barW, baseY, yScale(pct), 4), class: "bar" + (thin ? " bar-dim" : "") });
+      svg.appendChild(path);
+
+      const v = el("text", { x: cx, y: yScale(pct) - 6, class: "bar-label", "text-anchor": "middle" });
+      v.textContent = fmtPct(pct);
+      svg.appendChild(v);
+
+      const [nm, yr] = s.season.split(" ");
+      [[nm, "cat-label", baseY + 15], [yr, "cat-label", baseY + 28],
+       [`${s.games} g · ${fmtSigned(s.diffSum / s.games)} avg`, "tick-label", baseY + 43]].forEach(([txt, cls, y]) => {
+        const t = el("text", { x: cx, y, class: cls, "text-anchor": "middle" });
+        t.textContent = txt;
+        svg.appendChild(t);
+      });
+
+      const hit = el("rect", { x: cx - slot / 2 + 1, y: marginT, width: slot - 2, height: plotH + marginB - 4, class: "chart-hover-target" });
+      hit.addEventListener("mousemove", (evt) => {
+        showTooltip(evt, `<strong>${s.season}</strong><br>${s.wins}-${s.games - s.wins} (${fmtPct(pct)})<br>Avg point diff: ${fmtSigned(s.diffSum / s.games)}${thin ? "<br><span style='color:var(--text-muted)'>Small sample (&lt;" + MIN_GAMES_FOR_SEASON + " games)</span>" : ""}`);
+        moveTooltip(evt);
+      });
+      hit.addEventListener("mouseleave", hideTooltip);
+      svg.appendChild(hit);
+    });
   }
 
   // ---------- generic sortable table ----------
@@ -458,9 +635,7 @@
         <td class="${r.avgDiff >= 0 ? "diff-pos" : "diff-neg"}">${fmtSigned(r.avgDiff)}</td>
         <td class="${r.totalDiff >= 0 ? "diff-pos" : "diff-neg"}">${fmtSignedInt(r.totalDiff)}</td>`;
       tr.addEventListener("click", () => {
-        document.getElementById("profile-select").value = r.name;
-        document.getElementById("profile-select").dispatchEvent(new Event("change"));
-        document.getElementById("profile").scrollIntoView({ behavior: "smooth", block: "start" });
+        window.location.href = "profile.html?player=" + encodeURIComponent(r.name);
       });
       return tr;
     }
@@ -547,10 +722,13 @@
     const names = [...playerStats.values()].sort((a, b) => b.games - a.games).map((p) => p.name);
     select.innerHTML = names.map((n) => `<option value="${n}">${n}</option>`).join("");
 
+    let rollWindow = DEFAULT_ROLLING_WINDOW;
+
     function render(name) {
       const p = playerStats.get(name);
       if (!p) { content.innerHTML = `<p class="empty-state">No data for this player.</p>`; return; }
 
+      const enoughForProgress = p.games >= MIN_GAMES_FOR_PROGRESS;
       const winPct = p.games ? p.wins / p.games : 0;
       const avgDiff = p.games ? p.diffSum / p.games : 0;
 
@@ -593,6 +771,24 @@
           <div class="tile"><div class="tile-label">Avg point diff</div><div class="tile-value">${fmtSigned(avgDiff)}</div></div>
           <div class="tile"><div class="tile-label">Total point diff</div><div class="tile-value">${fmtSignedInt(p.diffSum)}</div></div>
         </div>
+        ${enoughForProgress ? `
+        <div class="card" style="margin-bottom:16px">
+          <div class="card-head">
+            <h3 style="margin:0;font-size:0.85rem;color:var(--text-secondary)">Rolling win % <span class="muted" style="font-weight:400">(last ${rollWindow} games · shaded = 95% range)</span></h3>
+            <div class="seg" role="group" aria-label="Rolling window size">
+              ${ROLLING_WINDOWS.map((w) => `<button type="button" class="seg-btn${w === rollWindow ? " active" : ""}" data-win="${w}">${w}</button>`).join("")}
+            </div>
+          </div>
+          <div class="chart-wrap"><svg id="profile-rolling-chart" class="chart"></svg></div>
+        </div>
+        <div class="card" style="margin-bottom:16px">
+          <h3 style="margin:0 0 10px;font-size:0.85rem;color:var(--text-secondary)">Season by season <span class="muted" style="font-weight:400">(faded = under ${MIN_GAMES_FOR_SEASON} games)</span></h3>
+          <div class="chart-wrap"><svg id="profile-season-chart" class="chart"></svg></div>
+        </div>` : `
+        <div class="card" style="margin-bottom:16px">
+          <h3 style="margin:0 0 6px;font-size:0.85rem;color:var(--text-secondary)">Progress over time</h3>
+          <p class="empty-state">Trend charts unlock at ${MIN_GAMES_FOR_PROGRESS} games (${p.games} so far) — fewer than that is mostly noise.</p>
+        </div>`}
         <div class="card" style="margin-bottom:16px">
           <h3 style="margin:0 0 10px;font-size:0.85rem;color:var(--text-secondary)">Cumulative point differential over time</h3>
           <div class="chart-wrap"><svg id="profile-line-chart" class="chart"></svg></div>
@@ -614,11 +810,26 @@
       `;
 
       drawLineChart(document.getElementById("profile-line-chart"), points);
+
+      if (enoughForProgress) {
+        drawRollingChart(document.getElementById("profile-rolling-chart"), p.history, rollWindow);
+        drawSeasonProgress(document.getElementById("profile-season-chart"), p.history);
+        content.querySelectorAll(".seg-btn").forEach((btn) =>
+          btn.addEventListener("click", () => { rollWindow = parseInt(btn.dataset.win, 10); render(name); }));
+      }
     }
 
-    select.addEventListener("change", () => render(select.value));
+    select.addEventListener("change", () => {
+      render(select.value);
+      const url = new URL(window.location);
+      url.searchParams.set("player", select.value);
+      history.replaceState(null, "", url);
+    });
     window.addEventListener("resize", debounce(() => render(select.value), 150));
-    if (names.length) render(names[0]);
+    // deep link: profile.html?player=Name (used by leaderboard row clicks)
+    const wanted = new URLSearchParams(window.location.search).get("player");
+    const initial = names.includes(wanted) ? wanted : names[0];
+    if (initial) { select.value = initial; render(initial); }
   }
 
   // ---------- Game log ----------
