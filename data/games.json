@@ -721,8 +721,8 @@
    "Don"
   ],
   "pair2": [
-   "Ben",
-   "Joe G."
+   "Ben G.",
+   "Joe"
   ],
   "score1": 10,
   "score2": 4
@@ -5237,5 +5237,1279 @@
   ],
   "score1": 11,
   "score2": 7
+ },
+ {
+  "date": "2026-09-02",
+  "pair1": [
+   "Frida",
+   "Kasey"
+  ],
+  "pair2": [
+   "Adam",
+   "Nicole"
+  ],
+  "score1": 5,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-02",
+  "pair1": [
+   "Daniel",
+   "Isaac"
+  ],
+  "pair2": [
+   "Bayley",
+   "Josh"
+  ],
+  "score1": 11,
+  "score2": 7
+ },
+ {
+  "date": "2026-09-02",
+  "pair1": [
+   "Primo",
+   "Adam"
+  ],
+  "pair2": [
+   "Daniel",
+   "Kasey"
+  ],
+  "score1": 5,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-09",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Kate",
+   "August"
+  ],
+  "score1": 10,
+  "score2": 9
+ },
+ {
+  "date": "2026-09-09",
+  "pair1": [
+   "Bayley",
+   "Josh"
+  ],
+  "pair2": [
+   "Jaylee",
+   "Jaden"
+  ],
+  "score1": 10,
+  "score2": 1
+ },
+ {
+  "date": "2026-09-09",
+  "pair1": [
+   "Primo",
+   "Adam"
+  ],
+  "pair2": [
+   "Isaac",
+   "Milo"
+  ],
+  "score1": 10,
+  "score2": 2
+ },
+ {
+  "date": "2026-09-09",
+  "pair1": [
+   "Milo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Isaac",
+   "Daniel"
+  ],
+  "score1": 10,
+  "score2": 0
+ },
+ {
+  "date": "2026-09-09",
+  "pair1": [
+   "Kasey",
+   "Milo"
+  ],
+  "pair2": [
+   "Daniel",
+   "Isaac"
+  ],
+  "score1": 4,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-09",
+  "pair1": [
+   "Primo",
+   "Josh"
+  ],
+  "pair2": [
+   "Daniel",
+   "Isaac"
+  ],
+  "score1": 3,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Kasey",
+   "Josh"
+  ],
+  "pair2": [
+   "Bayley",
+   "AJ"
+  ],
+  "score1": 6,
+  "score2": 11
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Primo",
+   "Allison"
+  ],
+  "pair2": [
+   "Nicole",
+   "Adam"
+  ],
+  "score1": 10,
+  "score2": 8
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Joe L.",
+   "Frida"
+  ],
+  "pair2": [
+   "Grady",
+   "Milo"
+  ],
+  "score1": 10,
+  "score2": 8
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Kasey",
+   "Daniel"
+  ],
+  "pair2": [
+   "AJ",
+   "Bayley"
+  ],
+  "score1": 10,
+  "score2": 7
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Adam",
+   "Chase"
+  ],
+  "score1": 10,
+  "score2": 9
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Joe L.",
+   "Grady"
+  ],
+  "pair2": [
+   "Frida",
+   "Nicole"
+  ],
+  "score1": 11,
+  "score2": 9
+ },
+ {
+  "date": "2026-09-16",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Daniel",
+   "Chase"
+  ],
+  "score1": 11,
+  "score2": 6
+ },
+ {
+  "date": "2026-09-23",
+  "pair1": [
+   "Kasey",
+   "Bayley"
+  ],
+  "pair2": [
+   "Isaac",
+   "Primo"
+  ],
+  "score1": 11,
+  "score2": 8
+ },
+ {
+  "date": "2026-09-23",
+  "pair1": [
+   "Chase",
+   "Kate"
+  ],
+  "pair2": [
+   "Milo",
+   "Grady"
+  ],
+  "score1": 3,
+  "score2": 12
+ },
+ {
+  "date": "2026-09-23",
+  "pair1": [
+   "Frida",
+   "Adam"
+  ],
+  "pair2": [
+   "Daniel",
+   "Lukas"
+  ],
+  "score1": 10,
+  "score2": 9
+ },
+ {
+  "date": "2026-09-23",
+  "pair1": [
+   "Kasey",
+   "Chase"
+  ],
+  "pair2": [
+   "Isaac",
+   "Milo"
+  ],
+  "score1": 5,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-23",
+  "pair1": [
+   "Primo",
+   "Daniel"
+  ],
+  "pair2": [
+   "Frida",
+   "Kate"
+  ],
+  "score1": 10,
+  "score2": 6
+ },
+ {
+  "date": "2026-09-23",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Milo",
+   "Kate"
+  ],
+  "score1": 7,
+  "score2": 11
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Chase",
+   "Kasey"
+  ],
+  "score1": 11,
+  "score2": 7
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Milo",
+   "Lukas"
+  ],
+  "pair2": [
+   "Daniel",
+   "Ben G."
+  ],
+  "score1": 11,
+  "score2": 4
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Kasey",
+   "Chase"
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Ben",
+   "Chase"
+  ],
+  "pair2": [
+   "Kate",
+   "Kasey"
+  ],
+  "score1": 11,
+  "score2": 6
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Primo",
+   "Milo"
+  ],
+  "pair2": [
+   "Lukas",
+   "Daniel"
+  ],
+  "score1": 5,
+  "score2": 10
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Primo",
+   "Lukas"
+  ],
+  "pair2": [
+   "Milo",
+   "Ben G."
+  ],
+  "score1": 11,
+  "score2": 6
+ },
+ {
+  "date": "2026-09-30",
+  "pair1": [
+   "Kate",
+   "Daniel"
+  ],
+  "pair2": [
+   "Kasey",
+   "Chase"
+  ],
+  "score1": 10,
+  "score2": 9
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Kate",
+   "Lukas"
+  ],
+  "pair2": [
+   "Kasey",
+   "Primo"
+  ],
+  "score1": 4,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Allison",
+   "Chase"
+  ],
+  "pair2": [
+   "Isaac",
+   "Adam"
+  ],
+  "score1": 6,
+  "score2": 11
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Kasey",
+   "Lukas"
+  ],
+  "score1": 7,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Isaac",
+   "Adam"
+  ],
+  "score1": 10,
+  "score2": 9
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Kasey",
+   "Lukas"
+  ],
+  "pair2": [
+   "Daniel",
+   "Josh"
+  ],
+  "score1": 6,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Daniel",
+   "Josh"
+  ],
+  "pair2": [
+   "Allison",
+   "Chase"
+  ],
+  "score1": 11,
+  "score2": 6
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Lukas",
+   "Kasey"
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-07",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Daniel",
+   "Josh"
+  ],
+  "score1": 11,
+  "score2": 5
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Chase",
+   "Grady"
+  ],
+  "score1": 7,
+  "score2": 11
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Adam",
+   "Jaden"
+  ],
+  "pair2": [
+   "Ben G.",
+   "Isaac"
+  ],
+  "score1": 10,
+  "score2": 7
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Lukas",
+   "Joe L."
+  ],
+  "pair2": [
+   "Allison",
+   "Kate"
+  ],
+  "score1": 11,
+  "score2": 7
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Josh",
+   "Ben G."
+  ],
+  "pair2": [
+   "Adam",
+   "Isaac"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Kasey",
+   "Primo"
+  ],
+  "pair2": [
+   "Grady",
+   "Daniel"
+  ],
+  "score1": 10,
+  "score2": 4
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Daniel",
+   "Josh"
+  ],
+  "score1": 7,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Lukas",
+   "Kate"
+  ],
+  "pair2": [
+   "Joe L.",
+   "Chase"
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Ben G.",
+   "Grady"
+  ],
+  "pair2": [
+   "Adam",
+   "Isaac"
+  ],
+  "score1": 12,
+  "score2": 9
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Primo",
+   "Ben G."
+  ],
+  "pair2": [
+   "Josh",
+   "Kate"
+  ],
+  "score1": 1,
+  "score2": 11
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Daniel",
+   "Adam"
+  ],
+  "pair2": [
+   "Isaac",
+   "Joe L."
+  ],
+  "score1": 10,
+  "score2": 2
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Lukas",
+   "Chase"
+  ],
+  "pair2": [
+   "Nicole",
+   "Kasey"
+  ],
+  "score1": 10,
+  "score2": 1
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Josh",
+   "Adam"
+  ],
+  "score1": 10,
+  "score2": 3
+ },
+ {
+  "date": "2026-10-14",
+  "pair1": [
+   "Daniel",
+   "Joe L."
+  ],
+  "pair2": [
+   "Isaac",
+   "Kate"
+  ],
+  "score1": 11,
+  "score2": 8
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Lukas",
+   "Primo"
+  ],
+  "pair2": [
+   "Kasey",
+   "Chase"
+  ],
+  "score1": 10,
+  "score2": 4
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Milo",
+   "Kate"
+  ],
+  "pair2": [
+   "Grady",
+   "Adam"
+  ],
+  "score1": 10,
+  "score2": 8
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Primo",
+   "Daniel"
+  ],
+  "pair2": [
+   "Lukas",
+   "Ben G."
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Lukas",
+   "Kasey"
+  ],
+  "pair2": [
+   "Ben G.",
+   "Chase"
+  ],
+  "score1": 10,
+  "score2": 7
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Lukas",
+   "Grady"
+  ],
+  "pair2": [
+   "Kasey",
+   "Adam"
+  ],
+  "score1": 10,
+  "score2": 6
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Kate",
+   "Primo"
+  ],
+  "pair2": [
+   "Daniel",
+   "Milo"
+  ],
+  "score1": 11,
+  "score2": 3
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Daniel",
+   "Milo"
+  ],
+  "score1": 6,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-21",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Milo",
+   "Daniel"
+  ],
+  "score1": 6,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Lukas",
+   "Chase"
+  ],
+  "pair2": [
+   "Kasey",
+   "Adam"
+  ],
+  "score1": 7,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Primo",
+   "Grady"
+  ],
+  "pair2": [
+   "Milo",
+   "Kate"
+  ],
+  "score1": 10,
+  "score2": 5
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Primo",
+   "Grady"
+  ],
+  "pair2": [
+   "Daniel",
+   "Milo"
+  ],
+  "score1": 8,
+  "score2": 11
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Adam",
+   "Chase"
+  ],
+  "pair2": [
+   "Kasey",
+   "Lukas"
+  ],
+  "score1": 4,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Lukas",
+   "Chase"
+  ],
+  "pair2": [
+   "Grady",
+   "Daniel"
+  ],
+  "score1": 10,
+  "score2": 2
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Adam",
+   "Primo"
+  ],
+  "pair2": [
+   "Kasey",
+   "Milo"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Adam",
+   "Kate"
+  ],
+  "pair2": [
+   "Lukas",
+   "Chase"
+  ],
+  "score1": 10,
+  "score2": 4
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Daniel",
+   "Milo"
+  ],
+  "pair2": [
+   "Grady",
+   "Kasey"
+  ],
+  "score1": 10,
+  "score2": 7
+ },
+ {
+  "date": "2026-10-28",
+  "pair1": [
+   "Primo",
+   "Grady"
+  ],
+  "pair2": [
+   "Milo",
+   "Daniel"
+  ],
+  "score1": 9,
+  "score2": 12
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Primo",
+   "Ben G."
+  ],
+  "pair2": [
+   "Milo",
+   "Grady"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Kate",
+   "Josh"
+  ],
+  "pair2": [
+   "Kasey",
+   "Adam"
+  ],
+  "score1": 1,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Jaden",
+   "Ben G."
+  ],
+  "pair2": [
+   "Grady",
+   "Milo"
+  ],
+  "score1": 9,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Daniel",
+   "Allison"
+  ],
+  "pair2": [
+   "Milo",
+   "Grady"
+  ],
+  "score1": 10,
+  "score2": 7
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Daniel",
+   "Christian"
+  ],
+  "pair2": [
+   "Grady",
+   "Milo"
+  ],
+  "score1": 10,
+  "score2": 4
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Kasey",
+   "Adam"
+  ],
+  "pair2": [
+   "Jaden",
+   "Ben G."
+  ],
+  "score1": 10,
+  "score2": 7
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Primo",
+   "Jaden"
+  ],
+  "pair2": [
+   "Kasey",
+   "Adam"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-04",
+  "pair1": [
+   "Grady",
+   "Milo"
+  ],
+  "pair2": [
+   "Christian",
+   "Daniel"
+  ],
+  "score1": 10,
+  "score2": 2
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Chase",
+   "Frida"
+  ],
+  "score1": 11,
+  "score2": 2
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Allison",
+   "Grady"
+  ],
+  "pair2": [
+   "AJ",
+   "Bayley"
+  ],
+  "score1": 10,
+  "score2": 5
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Milo",
+   "Kate"
+  ],
+  "pair2": [
+   "Lukas",
+   "Adam"
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Primo",
+   "Joe L."
+  ],
+  "pair2": [
+   "Chase",
+   "Kasey"
+  ],
+  "score1": 10,
+  "score2": 8
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Primo",
+   "Joe L."
+  ],
+  "pair2": [
+   "Chase",
+   "Daniel"
+  ],
+  "score1": 10,
+  "score2": 1
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Kasey",
+   "Lukas"
+  ],
+  "pair2": [
+   "Kate",
+   "Grady"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Josh",
+   "Ben G."
+  ],
+  "pair2": [
+   "Bayley",
+   "AJ"
+  ],
+  "score1": 9,
+  "score2": 13
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Primo",
+   "Grady"
+  ],
+  "pair2": [
+   "AJ",
+   "Kate"
+  ],
+  "score1": 6,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Kasey",
+   "Lukas"
+  ],
+  "pair2": [
+   "Daniel",
+   "Joe L."
+  ],
+  "score1": 1,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Ben G.",
+   "Bayley"
+  ],
+  "pair2": [
+   "Milo",
+   "Josh"
+  ],
+  "score1": 10,
+  "score2": 5
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Josh",
+   "Milo"
+  ],
+  "pair2": [
+   "Ben G.",
+   "Lukas"
+  ],
+  "score1": 10,
+  "score2": 6
+ },
+ {
+  "date": "2026-11-11",
+  "pair1": [
+   "Daniel",
+   "Milo"
+  ],
+  "pair2": [
+   "Josh",
+   "Kasey"
+  ],
+  "score1": 12,
+  "score2": 6
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Primo",
+   "Kasey"
+  ],
+  "pair2": [
+   "Joe L.",
+   "Peter"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Milo",
+   "Lukas"
+  ],
+  "pair2": [
+   "Kate",
+   "Isaac"
+  ],
+  "score1": 10,
+  "score2": 3
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Jaylee",
+   "Josh"
+  ],
+  "pair2": [
+   "Grady",
+   "Allison"
+  ],
+  "score1": 9,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Primo",
+   "Kate"
+  ],
+  "pair2": [
+   "Joe L.",
+   "Kasey"
+  ],
+  "score1": 2,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Kate",
+   "Primo"
+  ],
+  "pair2": [
+   "Daniel",
+   "Allison"
+  ],
+  "score1": 4,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Milo",
+   "Isaac"
+  ],
+  "pair2": [
+   "Lukas",
+   "Peter"
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Primo",
+   "Josh"
+  ],
+  "pair2": [
+   "Grady",
+   "Kasey"
+  ],
+  "score1": 8,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Josh",
+   "Grady"
+  ],
+  "pair2": [
+   "Kasey",
+   "Joe L."
+  ],
+  "score1": 10,
+  "score2": 3
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Jaylee",
+   "Joe L."
+  ],
+  "pair2": [
+   "Daniel",
+   "Kate"
+  ],
+  "score1": 10,
+  "score2": 6
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Primo",
+   "Grady"
+  ],
+  "pair2": [
+   "Daniel",
+   "Kate"
+  ],
+  "score1": 11,
+  "score2": 8
+ },
+ {
+  "date": "2026-11-18",
+  "pair1": [
+   "Kasey",
+   "Josh"
+  ],
+  "pair2": [
+   "Adam",
+   "Jaden"
+  ],
+  "score1": 7,
+  "score2": 12
  }
 ]
