@@ -358,6 +358,7 @@
   // ---------- progress (improvement over time) ----------
   const MIN_GAMES_FOR_PROGRESS = 10;   // below this, trend charts are mostly noise
   const MIN_GAMES_FOR_SEASON = 8;      // seasons with fewer games are dimmed
+  const MIN_GAMES_FOR_LOCATION = 3;    // location rows with fewer games are dimmed
   const ROLLING_WINDOWS = [10, 15, 25];
   const DEFAULT_ROLLING_WINDOW = 15;
 
@@ -755,6 +756,42 @@
 
     let rollWindow = DEFAULT_ROLLING_WINDOW;
 
+    // record-by-location table; sort state lives here so it survives re-renders
+    let locSortKey = "games", locSortDir = -1;
+    function renderLocationTable(table, rows) {
+      function draw() {
+        const sorted = [...rows].sort((a, b) => {
+          const av = locSortKey === "loc" ? a.loc.toLowerCase() : a[locSortKey];
+          const bv = locSortKey === "loc" ? b.loc.toLowerCase() : b[locSortKey];
+          if (av < bv) return -locSortDir;
+          if (av > bv) return locSortDir;
+          return b.games - a.games;
+        });
+        table.querySelector("tbody").innerHTML = sorted.map((r) => `
+          <tr class="${r.games < MIN_GAMES_FOR_LOCATION ? "row-dim" : ""}">
+            <td class="name-cell">${r.loc}</td>
+            <td>${r.games}</td>
+            <td>${r.wins}</td>
+            <td>${r.losses}</td>
+            <td class="${r.winPct >= 0.5 ? "win-good" : ""}">${fmtPct(r.winPct)}</td>
+            <td class="${r.avgDiff >= 0 ? "diff-pos" : "diff-neg"}">${fmtSigned(r.avgDiff)}</td>
+            <td class="${r.diffSum >= 0 ? "diff-pos" : "diff-neg"}">${fmtSignedInt(r.diffSum)}</td>
+          </tr>`).join("");
+        table.querySelectorAll("th[data-key]").forEach((th) => {
+          th.classList.remove("sorted", "sorted-asc");
+          if (th.dataset.key === locSortKey) th.classList.add(locSortDir === 1 ? "sorted-asc" : "sorted");
+        });
+      }
+      table.querySelectorAll("th[data-key]").forEach((th) => {
+        th.addEventListener("click", () => {
+          if (locSortKey === th.dataset.key) locSortDir *= -1;
+          else { locSortKey = th.dataset.key; locSortDir = th.dataset.key === "loc" ? 1 : -1; }
+          draw();
+        });
+      });
+      draw();
+    }
+
     function render(name) {
       const p = playerStats.get(name);
       if (!p) { content.innerHTML = `<p class="empty-state">No data for this player.</p>`; return; }
@@ -780,19 +817,20 @@
 
       const allPlayerGames = games.filter((g) => g.pair1.includes(name) || g.pair2.includes(name));
 
-      // record by location (min. 2 games there), most-played first
+      // historical record by location (every location with at least one game)
       const locMap = new Map();
+      let noLocation = 0;
       for (const g of allPlayerGames) {
-        if (!g.location) continue;
-        const won = g.pair1.includes(name) ? g.score1 > g.score2 : g.score2 > g.score1;
-        const s = locMap.get(g.location) || { loc: g.location, games: 0, wins: 0 };
-        s.games++; s.wins += won ? 1 : 0;
+        if (!g.location) { noLocation++; continue; }
+        const onPair1 = g.pair1.includes(name);
+        const diff = onPair1 ? g.score1 - g.score2 : g.score2 - g.score1;
+        const s = locMap.get(g.location) || { loc: g.location, games: 0, wins: 0, diffSum: 0 };
+        s.games++; s.wins += diff > 0 ? 1 : 0; s.diffSum += diff;
         locMap.set(g.location, s);
       }
-      const locations = [...locMap.values()]
-        .filter((s) => s.games >= 2)
-        .sort((a, b) => b.games - a.games || b.wins / b.games - a.wins / a.games)
-        .slice(0, 8);
+      const locations = [...locMap.values()].map((s) => ({
+        ...s, losses: s.games - s.wins, winPct: s.wins / s.games, avgDiff: s.diffSum / s.games,
+      }));
 
       // tournament games
       const tourneyGames = allPlayerGames.filter((g) => g.tournament);
@@ -843,6 +881,26 @@
           <h3 style="margin:0 0 10px;font-size:0.85rem;color:var(--text-secondary)">Cumulative point differential over time</h3>
           <div class="chart-wrap"><svg id="profile-line-chart" class="chart"></svg></div>
         </div>
+        <div class="card" style="margin-bottom:16px">
+          <h3 style="margin:0 0 10px;font-size:0.85rem;color:var(--text-secondary)">Record by location <span class="muted" style="font-weight:400">(click a column to sort${noLocation ? ` · ${noLocation} game${noLocation === 1 ? "" : "s"} with no location not included` : ""}${locations.some((s) => s.games < MIN_GAMES_FOR_LOCATION) ? ` · faded = under ${MIN_GAMES_FOR_LOCATION} games` : ""})</span></h3>
+          ${locations.length ? `
+          <div class="table-scroll">
+            <table id="profile-location-table">
+              <thead>
+                <tr>
+                  <th class="name-cell" data-key="loc">Location</th>
+                  <th data-key="games">Games</th>
+                  <th data-key="wins">W</th>
+                  <th data-key="losses">L</th>
+                  <th data-key="winPct">Win %</th>
+                  <th data-key="avgDiff">Avg Pt Diff</th>
+                  <th data-key="diffSum">Total Pt Diff</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>` : `<p class="empty-state">No games with a recorded location yet.</p>`}
+        </div>
         <div class="profile-grid">
           <div class="card">
             <h3>Best teammates <span class="muted" style="font-weight:400">(min. 2 games)</span></h3>
@@ -855,10 +913,6 @@
           <div class="card">
             <h3>Recent games</h3>
             ${playerGames.length ? `<ul class="mini-list">${playerGames.map((g) => `<li><span class="mi-name">${g.win ? "W" : "L"} vs ${g.opp.join(" & ")}${recentSub(g)}</span><span class="mi-meta ${g.win ? "win-good" : ""}">${g.my}-${g.their}</span></li>`).join("")}</ul>` : ""}
-          </div>
-          <div class="card">
-            <h3>By location <span class="muted" style="font-weight:400">(min. 2 games)</span></h3>
-            ${locations.length ? `<ul class="mini-list">${locations.map((s) => `<li><span class="mi-name">${s.loc}</span><span class="mi-meta">${s.wins}-${s.games - s.wins} · ${fmtPct(s.wins / s.games)}</span></li>`).join("")}</ul>` : `<p class="empty-state">No location data yet.</p>`}
           </div>
           ${tourneyGames.length ? `
           <div class="card">
@@ -874,6 +928,7 @@
       `;
 
       drawLineChart(document.getElementById("profile-line-chart"), points);
+      if (locations.length) renderLocationTable(document.getElementById("profile-location-table"), locations);
 
       if (enoughForProgress) {
         drawRollingChart(document.getElementById("profile-rolling-chart"), p.history, rollWindow);

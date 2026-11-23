@@ -339,6 +339,9 @@ svg.chart .bar-dim { opacity: 0.4; }
 .pill-tourney { background: transparent; border-color: var(--series-1); color: var(--series-1); }
 .round-label { color: var(--text-muted); font-size: 0.72rem; margin-top: 2px; }
 
+/* small-sample rows (e.g. a location a player has barely played at) */
+tr.row-dim td { opacity: 0.5; }
+
 footer {
   text-align: center;
   color: var(--text-muted);
