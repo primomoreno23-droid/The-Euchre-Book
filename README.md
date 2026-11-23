@@ -35,17 +35,23 @@ then visit `http://localhost:8123`.
 
 ### Updating the data
 
-Match results live in `Euchre_Book.xlsx`, on the **"The Book"** sheet (the
-master log all season tabs roll up into). To regenerate `data/games.json`
-after new games are added:
+Match results live in `data/Euchre_Book.xlsx`, one sheet per season or
+tournament. The old **"The Book"** sheet is ignored. To regenerate
+`data/games.json` after new games are added:
 
 ```bash
 pip install openpyxl
 python scripts/build_data.py
 ```
 
-Edit the `SRC` path at the top of `scripts/build_data.py` to point at your
-copy of the spreadsheet. The script trims stray whitespace from names and
-fixes two confirmed one-off typos ("Done" → "Don", "Jayleee" → "Jaylee"); it
-does not attempt to merge other similarly-spelled names (e.g. "Lucas" vs
-"Lukas") since those may be different people.
+The script reads every sheet and finds columns by header name. Each game gets
+`date`, `location` (or `null` when the cell says `NULL`), `pair1`, `pair2`,
+`score1` and `score2`. Sheets with a **Round** column are tournaments: their
+games also get `tournament` (the sheet name) and `round` (a number, or
+"Semi-Final" / "Final"). `games.json` is fully regenerated each run, so make
+corrections in the spreadsheet, not in the JSON.
+
+The script trims stray whitespace from names and fixes a few confirmed one-off
+typos ("Done" → "Don", "Jayleee" → "Jaylee", "Niclole" → "Nicole"); it does not
+attempt to merge other similarly-spelled names (e.g. "Lucas" vs "Lukas") since
+those may be different people.

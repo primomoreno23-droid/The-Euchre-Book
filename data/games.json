@@ -1,6 +1,7 @@
 [
  {
   "date": "2024-09-18",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Daniel"
@@ -14,6 +15,7 @@
  },
  {
   "date": "2024-09-18",
+  "location": "Benches",
   "pair1": [
    "Emma G",
    "Ashley"
@@ -27,6 +29,7 @@
  },
  {
   "date": "2024-09-18",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Daniel"
@@ -40,6 +43,7 @@
  },
  {
   "date": "2024-09-25",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Daniel"
@@ -53,6 +57,7 @@
  },
  {
   "date": "2024-09-25",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Daniel"
@@ -66,6 +71,7 @@
  },
  {
   "date": "2024-09-25",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Daniel"
@@ -79,6 +85,7 @@
  },
  {
   "date": "2024-10-02",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Daniel"
@@ -92,6 +99,7 @@
  },
  {
   "date": "2024-10-02",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -105,6 +113,7 @@
  },
  {
   "date": "2024-10-02",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -118,6 +127,7 @@
  },
  {
   "date": "2024-10-02",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -131,6 +141,7 @@
  },
  {
   "date": "2024-10-09",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Don"
@@ -144,6 +155,7 @@
  },
  {
   "date": "2024-10-09",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Daniel"
@@ -157,6 +169,7 @@
  },
  {
   "date": "2024-10-09",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -170,6 +183,7 @@
  },
  {
   "date": "2024-10-09",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -183,6 +197,7 @@
  },
  {
   "date": "2024-10-16",
+  "location": "Old Main",
   "pair1": [
    "Primo",
    "Daniel"
@@ -196,6 +211,7 @@
  },
  {
   "date": "2024-10-16",
+  "location": "Old Main",
   "pair1": [
    "Don",
    "Adam"
@@ -209,6 +225,7 @@
  },
  {
   "date": "2024-10-16",
+  "location": "Old Main",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -222,6 +239,7 @@
  },
  {
   "date": "2024-10-16",
+  "location": "Old Main",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -235,6 +253,7 @@
  },
  {
   "date": "2024-10-23",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Don"
@@ -248,6 +267,7 @@
  },
  {
   "date": "2024-10-23",
+  "location": "Bergendoff",
   "pair1": [
    "Emma",
    "Daniel"
@@ -261,6 +281,7 @@
  },
  {
   "date": "2024-10-23",
+  "location": "Bergendoff",
   "pair1": [
    "Emma",
    "Jaylee"
@@ -274,6 +295,7 @@
  },
  {
   "date": "2024-10-23",
+  "location": "Bergendoff",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -287,6 +309,7 @@
  },
  {
   "date": "2024-10-30",
+  "location": "Evald",
   "pair1": [
    "Daniel",
    "Jaylee"
@@ -300,6 +323,7 @@
  },
  {
   "date": "2024-10-30",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Don"
@@ -313,6 +337,7 @@
  },
  {
   "date": "2024-10-30",
+  "location": "Evald",
   "pair1": [
    "Joe L.",
    "Daniel"
@@ -326,6 +351,7 @@
  },
  {
   "date": "2024-11-06",
+  "location": "Art Studios",
   "pair1": [
    "Don",
    "Joe L."
@@ -339,6 +365,7 @@
  },
  {
   "date": "2024-11-06",
+  "location": "Art Studios",
   "pair1": [
    "Primo",
    "Adam"
@@ -352,6 +379,7 @@
  },
  {
   "date": "2024-11-06",
+  "location": "Art Studios",
   "pair1": [
    "Don",
    "Joe L."
@@ -365,6 +393,7 @@
  },
  {
   "date": "2024-11-06",
+  "location": "Art Studios",
   "pair1": [
    "Don",
    "Joe L."
@@ -378,6 +407,7 @@
  },
  {
   "date": "2024-11-06",
+  "location": "Art Studios",
   "pair1": [
    "Flores",
    "Primo"
@@ -391,6 +421,7 @@
  },
  {
   "date": "2024-11-13",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Daniel"
@@ -404,6 +435,7 @@
  },
  {
   "date": "2024-11-13",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Daniel"
@@ -417,6 +449,7 @@
  },
  {
   "date": "2024-11-13",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Daniel"
@@ -430,6 +463,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Primo",
    "Emma"
@@ -443,6 +477,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Don"
@@ -456,6 +491,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -469,6 +505,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Don",
    "Daniel"
@@ -482,6 +519,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Don",
    "Primo"
@@ -495,6 +533,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -508,6 +547,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -521,6 +561,7 @@
  },
  {
   "date": "2024-11-20",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -534,6 +575,7 @@
  },
  {
   "date": "2024-12-04",
+  "location": "B-Dubs",
   "pair1": [
    "Joe L.",
    "Don"
@@ -547,6 +589,7 @@
  },
  {
   "date": "2024-12-04",
+  "location": "B-Dubs",
   "pair1": [
    "Joe L.",
    "Don"
@@ -560,6 +603,7 @@
  },
  {
   "date": "2025-01-08",
+  "location": null,
   "pair1": [
    "Christian",
    "Bayley"
@@ -573,6 +617,7 @@
  },
  {
   "date": "2025-01-08",
+  "location": null,
   "pair1": [
    "Daniel",
    "Finbar"
@@ -586,6 +631,7 @@
  },
  {
   "date": "2025-01-08",
+  "location": null,
   "pair1": [
    "Daniel",
    "Finbar"
@@ -599,6 +645,7 @@
  },
  {
   "date": "2025-01-08",
+  "location": null,
   "pair1": [
    "Josh",
    "Primo"
@@ -612,6 +659,7 @@
  },
  {
   "date": "2025-01-08",
+  "location": null,
   "pair1": [
    "Joe G.",
    "Daniel"
@@ -625,6 +673,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Don"
@@ -638,6 +687,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Adam",
    "Flores"
@@ -651,6 +701,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Finbar",
    "Joe G."
@@ -664,6 +715,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Flores",
    "Jaylee"
@@ -677,6 +729,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Primo",
    "Daniel"
@@ -690,6 +743,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Jaylee"
@@ -703,6 +757,7 @@
  },
  {
   "date": "2025-01-15",
+  "location": null,
   "pair1": [
    "Finbar",
    "Joe G."
@@ -716,19 +771,21 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Don"
   ],
   "pair2": [
-   "Ben G.",
-   "Joe"
+   "Ben C.",
+   "Joe G."
   ],
   "score1": 10,
   "score2": 4
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Primo",
    "Daniel"
@@ -742,6 +799,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Finbar",
    "Adam"
@@ -755,6 +813,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Joe G.",
    "Ben C."
@@ -768,6 +827,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Primo",
    "Daniel"
@@ -781,6 +841,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Don"
@@ -794,6 +855,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Finbar",
    "Adam"
@@ -807,6 +869,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Daniel",
    "Primo"
@@ -820,6 +883,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Don"
@@ -833,6 +897,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Joe G.",
    "Ben C."
@@ -846,6 +911,7 @@
  },
  {
   "date": "2025-01-22",
+  "location": null,
   "pair1": [
    "Bayley",
    "Josh"
@@ -859,6 +925,7 @@
  },
  {
   "date": "2025-01-29",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Don"
@@ -872,6 +939,7 @@
  },
  {
   "date": "2025-01-29",
+  "location": null,
   "pair1": [
    "Finbar",
    "Bayley"
@@ -885,6 +953,7 @@
  },
  {
   "date": "2025-01-29",
+  "location": null,
   "pair1": [
    "Emma",
    "Adam"
@@ -898,6 +967,7 @@
  },
  {
   "date": "2025-01-29",
+  "location": null,
   "pair1": [
    "Primo",
    "Daniel"
@@ -911,6 +981,7 @@
  },
  {
   "date": "2025-01-29",
+  "location": null,
   "pair1": [
    "Finbar",
    "Bayley"
@@ -924,6 +995,7 @@
  },
  {
   "date": "2025-01-29",
+  "location": null,
   "pair1": [
    "Joe G.",
    "Josh"
@@ -937,6 +1009,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Josh"
@@ -950,6 +1023,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Joe G.",
    "Finbar"
@@ -963,6 +1037,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Daniel",
    "Adam"
@@ -976,6 +1051,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Finbar",
    "Joe G."
@@ -989,6 +1065,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Joe L.",
    "Primo"
@@ -1002,6 +1079,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Joe G.",
    "Finbar"
@@ -1015,6 +1093,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Don",
    "Jaylee"
@@ -1028,6 +1107,7 @@
  },
  {
   "date": "2025-02-05",
+  "location": "Olin",
   "pair1": [
    "Daniel",
    "Josh"
@@ -1041,6 +1121,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Joe L.",
    "Ben C."
@@ -1054,6 +1135,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Josh",
    "Jaylee"
@@ -1067,6 +1149,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Daniel",
    "Joe G."
@@ -1080,6 +1163,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Josh",
    "Jaylee"
@@ -1093,6 +1177,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Joe L.",
    "Finbar"
@@ -1106,6 +1191,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Joe G.",
    "Daniel"
@@ -1119,6 +1205,7 @@
  },
  {
   "date": "2025-02-12",
+  "location": "Swenson",
   "pair1": [
    "Joe G.",
    "Bayley"
@@ -1132,6 +1219,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Primo",
    "Ben C."
@@ -1145,6 +1233,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Finbar",
    "Jaylee"
@@ -1158,6 +1247,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Josh",
    "Daniel"
@@ -1171,6 +1261,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Finbar",
    "Jaylee"
@@ -1184,6 +1275,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Ben C.",
    "Primo"
@@ -1197,6 +1289,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Josh",
    "Daniel"
@@ -1210,6 +1303,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Ben C.",
    "Primo"
@@ -1223,6 +1317,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Joe L.",
    "Joe G."
@@ -1236,6 +1331,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Daniel",
    "Al"
@@ -1249,6 +1345,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Joe L.",
    "Finbar"
@@ -1262,6 +1359,7 @@
  },
  {
   "date": "2025-02-19",
+  "location": "Andreen",
   "pair1": [
    "Daniel",
    "Al"
@@ -1275,6 +1373,7 @@
  },
  {
   "date": "2025-02-26",
+  "location": "Fishbowl",
   "pair1": [
    "Don",
    "Bayley"
@@ -1288,6 +1387,7 @@
  },
  {
   "date": "2025-02-26",
+  "location": "Fishbowl",
   "pair1": [
    "Primo",
    "Finbar"
@@ -1301,6 +1401,7 @@
  },
  {
   "date": "2025-02-26",
+  "location": "Fishbowl",
   "pair1": [
    "Daniel",
    "Ben C."
@@ -1314,6 +1415,7 @@
  },
  {
   "date": "2025-02-26",
+  "location": "Fishbowl",
   "pair1": [
    "Primo",
    "Finbar"
@@ -1327,6 +1429,7 @@
  },
  {
   "date": "2025-02-26",
+  "location": "Fishbowl",
   "pair1": [
    "Joe G.",
    "Bayley"
@@ -1340,6 +1443,7 @@
  },
  {
   "date": "2025-02-26",
+  "location": "Fishbowl",
   "pair1": [
    "Joe L.",
    "Daniel"
@@ -1353,6 +1457,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Primo"
@@ -1366,6 +1471,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Don",
    "Bayley"
@@ -1379,6 +1485,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Don",
    "Bayley"
@@ -1392,6 +1499,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Joe G.",
    "Isaac"
@@ -1405,6 +1513,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Don",
    "Bayley"
@@ -1418,6 +1527,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Daniel",
    "Ben C."
@@ -1431,6 +1541,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Josh"
@@ -1444,6 +1555,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Joe G.",
    "Isaac"
@@ -1457,6 +1569,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Joe L.",
    "Josh"
@@ -1470,6 +1583,7 @@
  },
  {
   "date": "2025-03-05",
+  "location": "Hanson",
   "pair1": [
    "Isaac",
    "Daniel"
@@ -1483,6 +1597,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Ben C."
@@ -1496,6 +1611,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -1509,6 +1625,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Ben C."
@@ -1522,6 +1639,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -1535,6 +1653,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -1548,6 +1667,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Ben C."
@@ -1561,6 +1681,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Daniel",
    "Finbar"
@@ -1574,6 +1695,7 @@
  },
  {
   "date": "2025-03-12",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Ben C."
@@ -1587,6 +1709,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Finbar",
    "Daniel"
@@ -1600,6 +1723,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Adam"
@@ -1613,6 +1737,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Josh",
    "Bayley"
@@ -1626,6 +1751,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Adam"
@@ -1639,6 +1765,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Joe L.",
    "Don"
@@ -1652,6 +1779,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Daniel",
    "Finbar"
@@ -1665,6 +1793,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Joe L.",
    "Don"
@@ -1678,6 +1807,7 @@
  },
  {
   "date": "2025-03-19",
+  "location": "Olin",
   "pair1": [
    "Daniel",
    "Finbar"
@@ -1691,6 +1821,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Isaac",
    "Daniel"
@@ -1704,6 +1835,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Primo",
    "Josh"
@@ -1717,6 +1849,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Finbar",
    "Curtis"
@@ -1730,6 +1863,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Ben C.",
    "Adam"
@@ -1743,6 +1877,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Joe G.",
    "Bayley"
@@ -1756,6 +1891,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Primo",
    "Josh"
@@ -1769,6 +1905,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Joe L.",
    "Finbar"
@@ -1782,6 +1919,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Don",
    "Josh"
@@ -1795,6 +1933,7 @@
  },
  {
   "date": "2025-04-02",
+  "location": "Swannie",
   "pair1": [
    "Joe L.",
    "Finbar"
@@ -1808,6 +1947,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Isaac",
    "Daniel"
@@ -1821,6 +1961,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Don",
    "Finbar"
@@ -1834,6 +1975,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Ben C.",
    "Primo"
@@ -1847,6 +1989,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -1860,6 +2003,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Don",
    "Finbar"
@@ -1873,6 +2017,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -1886,6 +2031,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Bayley"
@@ -1899,6 +2045,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Finbar",
    "Don"
@@ -1912,6 +2059,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -1925,6 +2073,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Bayley"
@@ -1938,6 +2087,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Finbar",
    "Don"
@@ -1951,6 +2101,7 @@
  },
  {
   "date": "2025-04-09",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Bayley"
@@ -1964,6 +2115,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Finbar",
    "Ben C."
@@ -1977,6 +2129,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Flores",
    "Joe G."
@@ -1990,6 +2143,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -2003,6 +2157,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Flores",
    "Joe G."
@@ -2016,6 +2171,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Don",
    "Daniel"
@@ -2029,6 +2185,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -2042,6 +2199,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Flores",
    "Joe G."
@@ -2055,6 +2213,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Don",
    "Daniel"
@@ -2068,6 +2227,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Finbar",
    "Ben C."
@@ -2081,6 +2241,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Isaac",
    "Primo"
@@ -2094,6 +2255,7 @@
  },
  {
   "date": "2025-04-16",
+  "location": "Swenson",
   "pair1": [
    "Don",
    "Daniel"
@@ -2107,6 +2269,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Isaac",
    "Daniel"
@@ -2120,6 +2283,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Don"
@@ -2133,6 +2297,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Ben C."
@@ -2146,6 +2311,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Josh",
    "Adam"
@@ -2159,6 +2325,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Joe L.",
    "Josh"
@@ -2172,6 +2339,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Ben C."
@@ -2185,6 +2353,7 @@
  },
  {
   "date": "2025-04-23",
+  "location": "Evald",
   "pair1": [
    "Joe L.",
    "Josh"
@@ -2198,6 +2367,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Josh"
@@ -2211,6 +2381,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Primo",
    "Daniel"
@@ -2224,6 +2395,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Josh"
@@ -2237,6 +2409,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Primo",
    "Daniel"
@@ -2250,6 +2423,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Josh"
@@ -2263,6 +2437,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Ben C.",
    "Adam"
@@ -2276,6 +2451,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Finbar",
    "Bayley"
@@ -2289,6 +2465,7 @@
  },
  {
   "date": "2025-04-30",
+  "location": null,
   "pair1": [
    "Joe L.",
    "Josh"
@@ -2302,6 +2479,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Joe L.",
    "Isaac"
@@ -2315,6 +2493,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Bayley",
    "Daniel"
@@ -2328,6 +2507,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Joe L.",
    "Isaac"
@@ -2341,6 +2521,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Bayley",
    "Daniel"
@@ -2354,6 +2535,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Joe L.",
    "Isaac"
@@ -2367,6 +2549,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Random"
@@ -2380,6 +2563,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Daniel",
    "Bayley"
@@ -2393,6 +2577,7 @@
  },
  {
   "date": "2025-05-07",
+  "location": "Swenson",
   "pair1": [
    "Joe L.",
    "Isaac"
@@ -2406,6 +2591,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Finbar",
    "Josh"
@@ -2419,6 +2605,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Adam"
@@ -2432,6 +2619,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Finbar",
    "Joe L."
@@ -2445,6 +2633,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Joe G.",
    "Rylee"
@@ -2458,6 +2647,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Bayley",
    "Ben C."
@@ -2471,6 +2661,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -2484,6 +2675,7 @@
  },
  {
   "date": "2025-05-13",
+  "location": "Brunner",
   "pair1": [
    "Don",
    "Josh"
@@ -2497,6 +2689,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Don",
    "Jaden"
@@ -2510,6 +2703,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Lukas"
@@ -2523,6 +2717,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Milio",
    "Jose"
@@ -2536,6 +2731,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Jaden",
    "Don"
@@ -2549,6 +2745,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Jaden",
    "Don"
@@ -2562,6 +2759,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Milio"
@@ -2575,6 +2773,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Daniel",
    "Lukas"
@@ -2588,6 +2787,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Adam",
    "Mitch"
@@ -2601,6 +2801,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Joe L.",
    "Isaac"
@@ -2614,6 +2815,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Daniel",
    "Frida"
@@ -2627,6 +2829,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Don",
    "Primo"
@@ -2640,6 +2843,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Isaac",
    "Joe L."
@@ -2653,6 +2857,7 @@
  },
  {
   "date": "2025-08-27",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Mitch"
@@ -2666,6 +2871,7 @@
  },
  {
   "date": "2025-09-03",
+  "location": "Olin",
   "pair1": [
    "Don",
    "Bayley"
@@ -2679,6 +2885,7 @@
  },
  {
   "date": "2025-09-03",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Finbar"
@@ -2692,6 +2899,7 @@
  },
  {
   "date": "2025-09-03",
+  "location": "Olin",
   "pair1": [
    "Don",
    "Bayley"
@@ -2705,6 +2913,7 @@
  },
  {
   "date": "2025-09-10",
+  "location": null,
   "pair1": [
    "Primo",
    "Bayley"
@@ -2718,6 +2927,7 @@
  },
  {
   "date": "2025-09-10",
+  "location": null,
   "pair1": [
    "Milo",
    "Don"
@@ -2731,6 +2941,7 @@
  },
  {
   "date": "2025-09-10",
+  "location": null,
   "pair1": [
    "Primo",
    "Bayley"
@@ -2744,6 +2955,7 @@
  },
  {
   "date": "2025-09-10",
+  "location": null,
   "pair1": [
    "Finbar",
    "Isaac"
@@ -2757,6 +2969,7 @@
  },
  {
   "date": "2025-09-10",
+  "location": null,
   "pair1": [
    "Primo",
    "Bayley"
@@ -2770,6 +2983,7 @@
  },
  {
   "date": "2025-09-10",
+  "location": null,
   "pair1": [
    "Isaac",
    "Finbar"
@@ -2783,6 +2997,7 @@
  },
  {
   "date": "2025-09-17",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Bayley"
@@ -2796,6 +3011,7 @@
  },
  {
   "date": "2025-09-17",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -2809,6 +3025,7 @@
  },
  {
   "date": "2025-09-17",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -2822,6 +3039,7 @@
  },
  {
   "date": "2025-09-24",
+  "location": "Benches",
   "pair1": [
    "Bayley",
    "Isaac"
@@ -2835,6 +3053,7 @@
  },
  {
   "date": "2025-09-24",
+  "location": "Benches",
   "pair1": [
    "Primo",
    "Milo"
@@ -2848,6 +3067,7 @@
  },
  {
   "date": "2025-10-01",
+  "location": "Brunner",
   "pair1": [
    "Allison",
    "Daniel"
@@ -2861,6 +3081,7 @@
  },
  {
   "date": "2025-10-01",
+  "location": "Brunner",
   "pair1": [
    "Primo",
    "Bayley"
@@ -2874,6 +3095,7 @@
  },
  {
   "date": "2025-10-01",
+  "location": "Brunner",
   "pair1": [
    "Allison",
    "Daniel"
@@ -2887,6 +3109,7 @@
  },
  {
   "date": "2025-10-08",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Lukas"
@@ -2900,6 +3123,7 @@
  },
  {
   "date": "2025-10-08",
+  "location": "Swenson",
   "pair1": [
    "Adam",
    "Lukas"
@@ -2913,6 +3137,7 @@
  },
  {
   "date": "2025-10-15",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Nicole"
@@ -2926,6 +3151,7 @@
  },
  {
   "date": "2025-10-22",
+  "location": null,
   "pair1": [
    "Milo",
    "Lukas"
@@ -2939,6 +3165,7 @@
  },
  {
   "date": "2025-10-22",
+  "location": null,
   "pair1": [
    "Daniel",
    "Isaac"
@@ -2952,6 +3179,7 @@
  },
  {
   "date": "2025-10-29",
+  "location": null,
   "pair1": [
    "Primo",
    "Milo"
@@ -2965,6 +3193,7 @@
  },
  {
   "date": "2025-10-29",
+  "location": null,
   "pair1": [
    "Primo",
    "Milo"
@@ -2978,6 +3207,7 @@
  },
  {
   "date": "2025-11-05",
+  "location": "Lindberg",
   "pair1": [
    "Primo",
    "Ben G."
@@ -2991,6 +3221,7 @@
  },
  {
   "date": "2025-11-05",
+  "location": "Lindberg",
   "pair1": [
    "Primo",
    "Ben G."
@@ -3004,6 +3235,7 @@
  },
  {
   "date": "2025-11-12",
+  "location": "Olin",
   "pair1": [
    "Ben G.",
    "Jaden"
@@ -3017,6 +3249,7 @@
  },
  {
   "date": "2025-11-12",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Frida"
@@ -3030,6 +3263,7 @@
  },
  {
   "date": "2025-11-12",
+  "location": "Olin",
   "pair1": [
    "Lukas",
    "Milo"
@@ -3043,6 +3277,7 @@
  },
  {
   "date": "2025-11-12",
+  "location": "Olin",
   "pair1": [
    "Lukas",
    "Milo"
@@ -3056,6 +3291,7 @@
  },
  {
   "date": "2025-11-12",
+  "location": "Olin",
   "pair1": [
    "Josh",
    "Jaden"
@@ -3069,6 +3305,7 @@
  },
  {
   "date": "2025-11-12",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Daniel"
@@ -3082,6 +3319,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3095,6 +3333,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Daniel",
    "Lukas"
@@ -3108,6 +3347,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Daniel",
    "Lukas"
@@ -3121,6 +3361,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Allison",
    "Elizabeth"
@@ -3134,6 +3375,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Allison",
    "Joe L."
@@ -3147,6 +3389,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3160,6 +3403,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Kasey",
    "Frida"
@@ -3173,6 +3417,7 @@
  },
  {
   "date": "2025-11-19",
+  "location": "Westie",
   "pair1": [
    "Primo",
    "Lukas"
@@ -3186,6 +3431,7 @@
  },
  {
   "date": "2025-11-25",
+  "location": "Ken Anderson",
   "pair1": [
    "Primo",
    "Kasey"
@@ -3199,6 +3445,7 @@
  },
  {
   "date": "2025-11-25",
+  "location": "Ken Anderson",
   "pair1": [
    "Lukas",
    "Isaac"
@@ -3212,6 +3459,7 @@
  },
  {
   "date": "2025-11-25",
+  "location": "Ken Anderson",
   "pair1": [
    "Primo",
    "Kasey"
@@ -3225,6 +3473,7 @@
  },
  {
   "date": "2025-11-25",
+  "location": "Ken Anderson",
   "pair1": [
    "Lukas",
    "Isaac"
@@ -3238,6 +3487,7 @@
  },
  {
   "date": "2025-11-25",
+  "location": "Ken Anderson",
   "pair1": [
    "August",
    "Ben G."
@@ -3251,6 +3501,7 @@
  },
  {
   "date": "2025-11-25",
+  "location": "Ken Anderson",
   "pair1": [
    "Lukas",
    "Isaac"
@@ -3264,6 +3515,7 @@
  },
  {
   "date": "2025-12-03",
+  "location": null,
   "pair1": [
    "Christian",
    "Rosa"
@@ -3277,6 +3529,7 @@
  },
  {
   "date": "2025-12-10",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Frida"
@@ -3290,6 +3543,7 @@
  },
  {
   "date": "2025-12-10",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Nicole"
@@ -3303,6 +3557,7 @@
  },
  {
   "date": "2026-01-07",
+  "location": "Westie",
   "pair1": [
    "Josh",
    "Lukas"
@@ -3316,6 +3571,7 @@
  },
  {
   "date": "2026-01-07",
+  "location": "Westie",
   "pair1": [
    "Allison",
    "Primo"
@@ -3329,6 +3585,7 @@
  },
  {
   "date": "2026-01-07",
+  "location": "Westie",
   "pair1": [
    "Lukas",
    "Josh"
@@ -3342,6 +3599,7 @@
  },
  {
   "date": "2026-01-07",
+  "location": "Westie",
   "pair1": [
    "Elizabeth",
    "Primo"
@@ -3355,6 +3613,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3368,6 +3627,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Lukas",
    "Elizabeth"
@@ -3381,6 +3641,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Jaylee",
    "Daniel"
@@ -3394,6 +3655,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Daniel",
    "Rosa"
@@ -3407,6 +3669,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Frida",
    "Christian"
@@ -3420,6 +3683,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Milo",
    "Josh"
@@ -3433,6 +3697,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Lukas",
    "Jaden"
@@ -3446,6 +3711,7 @@
  },
  {
   "date": "2026-01-21",
+  "location": "Brew",
   "pair1": [
    "Isaac",
    "Primo"
@@ -3459,6 +3725,7 @@
  },
  {
   "date": "2026-02-04",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Joe L."
@@ -3472,6 +3739,7 @@
  },
  {
   "date": "2026-02-04",
+  "location": "Hanson",
   "pair1": [
    "Adam",
    "Milo"
@@ -3485,6 +3753,7 @@
  },
  {
   "date": "2026-02-04",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Don"
@@ -3498,6 +3767,7 @@
  },
  {
   "date": "2026-02-04",
+  "location": "Hanson",
   "pair1": [
    "Ben G.",
    "Daniel"
@@ -3511,6 +3781,7 @@
  },
  {
   "date": "2026-02-04",
+  "location": "Hanson",
   "pair1": [
    "Milo",
    "Primo"
@@ -3524,6 +3795,7 @@
  },
  {
   "date": "2026-02-11",
+  "location": "Raccoon Motel",
   "pair1": [
    "Isaac",
    "Adam"
@@ -3537,6 +3809,7 @@
  },
  {
   "date": "2026-02-11",
+  "location": "Raccoon Motel",
   "pair1": [
    "Primo",
    "Kasey"
@@ -3550,6 +3823,7 @@
  },
  {
   "date": "2026-02-11",
+  "location": "Raccoon Motel",
   "pair1": [
    "Kasey",
    "Primo"
@@ -3563,6 +3837,7 @@
  },
  {
   "date": "2026-02-11",
+  "location": "Raccoon Motel",
   "pair1": [
    "Adam",
    "Isaac"
@@ -3576,6 +3851,7 @@
  },
  {
   "date": "2026-02-11",
+  "location": "Raccoon Motel",
   "pair1": [
    "Kasey",
    "Primo"
@@ -3589,6 +3865,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -3602,6 +3879,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Ben G.",
    "Nicole"
@@ -3615,6 +3893,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -3628,6 +3907,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Allison",
    "Milo"
@@ -3641,6 +3921,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -3654,6 +3935,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Ben G.",
    "Isaac"
@@ -3667,6 +3949,7 @@
  },
  {
   "date": "2026-02-18",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Nicole"
@@ -3680,6 +3963,7 @@
  },
  {
   "date": "2026-02-25",
+  "location": "Westie",
   "pair1": [
    "Kasey",
    "Isaac"
@@ -3693,6 +3977,7 @@
  },
  {
   "date": "2026-02-25",
+  "location": "Westie",
   "pair1": [
    "Primo",
    "Daniel"
@@ -3706,6 +3991,7 @@
  },
  {
   "date": "2026-02-25",
+  "location": "Westie",
   "pair1": [
    "Milo",
    "Lukas"
@@ -3719,6 +4005,7 @@
  },
  {
   "date": "2026-02-25",
+  "location": "Westie",
   "pair1": [
    "Ben M.",
    "Liam"
@@ -3732,6 +4019,7 @@
  },
  {
   "date": "2026-02-25",
+  "location": "Westie",
   "pair1": [
    "Kasey",
    "Isaac"
@@ -3745,6 +4033,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3758,6 +4047,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "AJ",
    "Lukas"
@@ -3771,6 +4061,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Liam"
@@ -3784,6 +4075,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3797,6 +4089,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Liam"
@@ -3810,6 +4103,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3823,6 +4117,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "AJ",
    "Lukas"
@@ -3836,6 +4131,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3849,6 +4145,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3862,6 +4159,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Milo",
    "Ben G."
@@ -3875,6 +4173,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Daniel"
@@ -3888,6 +4187,7 @@
  },
  {
   "date": "2026-03-04",
+  "location": "Swenson",
   "pair1": [
    "Lukas",
    "AJ"
@@ -3901,6 +4201,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3914,6 +4215,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Kasey",
    "Daniel"
@@ -3927,6 +4229,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "AJ",
    "Elizabeth"
@@ -3940,6 +4243,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "AJ",
    "Elizabeth"
@@ -3953,6 +4257,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Primo",
    "Isaac"
@@ -3966,6 +4271,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "AJ",
    "Elizabeth"
@@ -3979,6 +4285,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Kasey",
    "Daniel"
@@ -3992,6 +4299,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Primo",
    "Isaac"
@@ -4005,6 +4313,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Primo",
    "Isaac"
@@ -4018,6 +4327,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Kasey",
    "Joe L."
@@ -4031,6 +4341,7 @@
  },
  {
   "date": "2026-03-11",
+  "location": "Lindberg",
   "pair1": [
    "Allison",
    "AJ"
@@ -4044,6 +4355,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Primo",
    "Joe L."
@@ -4057,6 +4369,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Milo",
    "Lukas"
@@ -4070,6 +4383,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Kasey",
    "Daniel"
@@ -4083,6 +4397,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Frida",
    "Nicole"
@@ -4096,6 +4411,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Kasey",
    "Daniel"
@@ -4109,6 +4425,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Peyton",
    "Doug"
@@ -4122,6 +4439,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Joe L.",
    "Primo"
@@ -4135,6 +4453,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Lukas",
    "Milo"
@@ -4148,6 +4467,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Isaac",
    "Doug"
@@ -4161,6 +4481,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Isaac",
    "Milo"
@@ -4174,6 +4495,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "AJ",
    "Bayley"
@@ -4187,6 +4509,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "AJ",
    "Bayley"
@@ -4200,6 +4523,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Kasey",
    "Allison"
@@ -4213,6 +4537,7 @@
  },
  {
   "date": "2026-03-18",
+  "location": "Brunner",
   "pair1": [
    "Frida",
    "Nicole"
@@ -4226,6 +4551,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Daniel"
@@ -4239,6 +4565,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Peyton",
    "Joe L."
@@ -4252,6 +4579,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Jaylee",
    "Allison"
@@ -4265,6 +4593,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Milo",
    "Lukas"
@@ -4278,6 +4607,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Kasey"
@@ -4291,6 +4621,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Daniel",
    "Joe L."
@@ -4304,6 +4635,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "AJ",
    "Bayley"
@@ -4317,6 +4649,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -4330,6 +4663,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Jaylee",
    "Allison"
@@ -4343,6 +4677,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Frida",
    "Nicole"
@@ -4356,6 +4691,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Allison",
    "Kasey"
@@ -4369,6 +4705,7 @@
  },
  {
   "date": "2026-04-01",
+  "location": "Hanson",
   "pair1": [
    "Lukas",
    "Milo"
@@ -4382,6 +4719,7 @@
  },
  {
   "date": "2026-04-08",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Primo"
@@ -4395,6 +4733,7 @@
  },
  {
   "date": "2026-04-08",
+  "location": "Swenson",
   "pair1": [
    "Milo",
    "Jaden"
@@ -4408,6 +4747,7 @@
  },
  {
   "date": "2026-04-08",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Primo"
@@ -4421,6 +4761,7 @@
  },
  {
   "date": "2026-04-08",
+  "location": "Swenson",
   "pair1": [
    "Milo",
    "Jaden"
@@ -4434,6 +4775,7 @@
  },
  {
   "date": "2026-04-08",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Primo"
@@ -4447,6 +4789,7 @@
  },
  {
   "date": "2026-04-08",
+  "location": "Swenson",
   "pair1": [
    "Lukas",
    "Ben G."
@@ -4460,6 +4803,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "Don",
    "Primo"
@@ -4473,6 +4817,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "AJ",
    "Josh"
@@ -4486,6 +4831,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "Nicole",
    "Frida"
@@ -4499,6 +4845,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "Don",
    "Primo"
@@ -4512,6 +4859,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Don"
@@ -4525,6 +4873,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "AJ",
    "Josh"
@@ -4538,6 +4887,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "Nicole",
    "Milo"
@@ -4551,6 +4901,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "Milo",
    "Kasey"
@@ -4564,6 +4915,7 @@
  },
  {
   "date": "2026-04-15",
+  "location": "Bergendoff",
   "pair1": [
    "AJ",
    "Josh"
@@ -4577,6 +4929,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Kasey"
@@ -4590,6 +4943,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Frida",
    "Nicole"
@@ -4603,6 +4957,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Jaden",
    "Lukas"
@@ -4616,6 +4971,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Kasey",
    "Milo"
@@ -4629,6 +4985,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Joe L.",
    "Isaac"
@@ -4642,6 +4999,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Ben G."
@@ -4655,6 +5013,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "AJ",
    "Josh"
@@ -4668,6 +5027,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Ben G."
@@ -4681,6 +5041,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Frida",
    "Nicole"
@@ -4694,6 +5055,7 @@
  },
  {
   "date": "2026-04-22",
+  "location": "Evald",
   "pair1": [
    "Primo",
    "Isaac"
@@ -4707,6 +5069,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Isaac"
@@ -4720,6 +5083,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Ben G.",
    "Josh"
@@ -4733,6 +5097,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Kasey",
    "Jaden"
@@ -4746,6 +5111,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Milo"
@@ -4759,6 +5125,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Frida",
    "Nicole"
@@ -4772,6 +5139,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Peyton",
    "Jaden"
@@ -4785,6 +5153,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Daniel"
@@ -4798,6 +5167,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Daniel"
@@ -4811,6 +5181,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Lukas",
    "Elizabeth"
@@ -4824,6 +5195,7 @@
  },
  {
   "date": "2026-04-29",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Kasey"
@@ -4837,6 +5209,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Elizabeth",
    "Lukas"
@@ -4850,6 +5223,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "AJ",
    "Josh"
@@ -4863,6 +5237,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Jaden"
@@ -4876,6 +5251,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Milo",
    "Isaac"
@@ -4889,6 +5265,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "AJ",
    "Josh"
@@ -4902,6 +5279,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Nicole",
    "Frida"
@@ -4915,6 +5293,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Kasey",
    "Ben G."
@@ -4928,6 +5307,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Kasey",
    "Allison"
@@ -4941,6 +5321,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Isaac",
    "Daniel"
@@ -4954,6 +5335,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Jaden",
    "Lukas"
@@ -4967,6 +5349,7 @@
  },
  {
   "date": "2026-05-06",
+  "location": "Olin",
   "pair1": [
    "Kasey",
    "Milo"
@@ -4980,6 +5363,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Kasey",
    "Milo"
@@ -4993,6 +5377,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Daniel",
    "Adam"
@@ -5006,6 +5391,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Frida",
    "Pika"
@@ -5019,6 +5405,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Primo",
    "Pika"
@@ -5032,6 +5419,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Daniel",
    "Adam"
@@ -5045,6 +5433,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Josh",
    "Elizabeth"
@@ -5058,6 +5447,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Kasey",
    "Pika"
@@ -5071,6 +5461,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Primo",
    "Adam"
@@ -5084,6 +5475,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Josh",
    "Milo"
@@ -5097,6 +5489,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Josh",
    "Milo"
@@ -5110,6 +5503,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Josh",
    "Milo"
@@ -5123,6 +5517,7 @@
  },
  {
   "date": "2026-05-12",
+  "location": "Tredway",
   "pair1": [
    "Daniel",
    "Kasey"
@@ -5136,6 +5531,7 @@
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Primo",
    "Jaden"
@@ -5145,10 +5541,13 @@
    "August"
   ],
   "score1": 10,
-  "score2": 3
+  "score2": 3,
+  "tournament": "Bix Tournament 2026",
+  "round": 0
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Primo",
    "Jaden"
@@ -5158,10 +5557,13 @@
    "August"
   ],
   "score1": 10,
-  "score2": 8
+  "score2": 8,
+  "tournament": "Bix Tournament 2026",
+  "round": 1
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Peyton",
    "Kasey"
@@ -5171,10 +5573,13 @@
    "Mr. Haywood"
   ],
   "score1": 10,
-  "score2": 2
+  "score2": 2,
+  "tournament": "Bix Tournament 2026",
+  "round": 1
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Christian",
    "Bayley"
@@ -5184,10 +5589,13 @@
    "Ben G."
   ],
   "score1": 8,
-  "score2": 10
+  "score2": 10,
+  "tournament": "Bix Tournament 2026",
+  "round": 1
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Nicole",
    "Ben M."
@@ -5197,10 +5605,13 @@
    "Daniel"
   ],
   "score1": 10,
-  "score2": 3
+  "score2": 3,
+  "tournament": "Bix Tournament 2026",
+  "round": 1
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Nicole",
    "Ben M."
@@ -5210,10 +5621,13 @@
    "Ben G."
   ],
   "score1": 10,
-  "score2": 7
+  "score2": 7,
+  "tournament": "Bix Tournament 2026",
+  "round": "Semi-Final"
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Primo",
    "Jaden"
@@ -5223,10 +5637,13 @@
    "Kasey"
   ],
   "score1": 10,
-  "score2": 5
+  "score2": 5,
+  "tournament": "Bix Tournament 2026",
+  "round": "Semi-Final"
  },
  {
   "date": "2026-07-24",
+  "location": "Ken Anderson",
   "pair1": [
    "Primo",
    "Jaden"
@@ -5236,10 +5653,253 @@
    "Ben M."
   ],
   "score1": 11,
-  "score2": 7
+  "score2": 7,
+  "tournament": "Bix Tournament 2026",
+  "round": "Final"
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Ian",
+   "Jonah"
+  ],
+  "pair2": [
+   "Lukas",
+   "Grady"
+  ],
+  "score1": 3,
+  "score2": 11,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Peyton",
+   "Christian"
+  ],
+  "pair2": [
+   "Elizabeth",
+   "Kiera"
+  ],
+  "score1": 5,
+  "score2": 10,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "August",
+   "Kevine"
+  ],
+  "pair2": [
+   "Kate",
+   "Kylie"
+  ],
+  "score1": 7,
+  "score2": 10,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Allison",
+   "Rosa"
+  ],
+  "pair2": [
+   "Frida",
+   "Nicole"
+  ],
+  "score1": 7,
+  "score2": 10,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Jaden",
+   "Ben G."
+  ],
+  "pair2": [
+   "Kenzie",
+   "Savannah"
+  ],
+  "score1": 10,
+  "score2": 4,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Primo",
+   "Daniel"
+  ],
+  "pair2": [
+   "Oscar",
+   "Chase"
+  ],
+  "score1": 10,
+  "score2": 4,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Ben M.",
+   "Gage"
+  ],
+  "pair2": [
+   "Heinz",
+   "Doug"
+  ],
+  "score1": 5,
+  "score2": 10,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "Ken Anderson",
+  "pair1": [
+   "Kasey",
+   "Milo"
+  ],
+  "pair2": [
+   "Adam",
+   "Isaac"
+  ],
+  "score1": 15,
+  "score2": 5,
+  "tournament": "XC Camp 2026",
+  "round": 1
+ },
+ {
+  "date": "2026-08-23",
+  "location": "CSL",
+  "pair1": [
+   "Jaden",
+   "Ben G."
+  ],
+  "pair2": [
+   "Primo",
+   "Daniel"
+  ],
+  "score1": 15,
+  "score2": 12,
+  "tournament": "XC Camp 2026",
+  "round": 2
+ },
+ {
+  "date": "2026-08-25",
+  "location": "Shalom",
+  "pair1": [
+   "Heinz",
+   "Doug"
+  ],
+  "pair2": [
+   "Kasey",
+   "Milo"
+  ],
+  "score1": 13,
+  "score2": 15,
+  "tournament": "XC Camp 2026",
+  "round": 2
+ },
+ {
+  "date": "2026-08-25",
+  "location": "Shalom",
+  "pair1": [
+   "Lukas",
+   "Grady"
+  ],
+  "pair2": [
+   "Elizabeth",
+   "Kiera"
+  ],
+  "score1": 8,
+  "score2": 11,
+  "tournament": "XC Camp 2026",
+  "round": 2
+ },
+ {
+  "date": "2026-08-25",
+  "location": "Shalom",
+  "pair1": [
+   "Kate",
+   "Kylie"
+  ],
+  "pair2": [
+   "Frida",
+   "Nicole"
+  ],
+  "score1": 11,
+  "score2": 9,
+  "tournament": "XC Camp 2026",
+  "round": 2
+ },
+ {
+  "date": "2026-08-25",
+  "location": "Shalom",
+  "pair1": [
+   "Elizabeth",
+   "Kiera"
+  ],
+  "pair2": [
+   "Kate",
+   "Kylie"
+  ],
+  "score1": 4,
+  "score2": 10,
+  "tournament": "XC Camp 2026",
+  "round": "Semi-Final"
+ },
+ {
+  "date": "2026-08-25",
+  "location": "Shalom",
+  "pair1": [
+   "Jaden",
+   "Ben G."
+  ],
+  "pair2": [
+   "Milo",
+   "Kasey"
+  ],
+  "score1": 15,
+  "score2": 12,
+  "tournament": "XC Camp 2026",
+  "round": "Semi-Final"
+ },
+ {
+  "date": "2026-08-25",
+  "location": "Shalom",
+  "pair1": [
+   "Kate",
+   "Kylie"
+  ],
+  "pair2": [
+   "Jaden",
+   "Ben G."
+  ],
+  "score1": 13,
+  "score2": 15,
+  "tournament": "XC Camp 2026",
+  "round": "Final"
  },
  {
   "date": "2026-09-02",
+  "location": "Hanson",
   "pair1": [
    "Frida",
    "Kasey"
@@ -5253,6 +5913,7 @@
  },
  {
   "date": "2026-09-02",
+  "location": "Hanson",
   "pair1": [
    "Daniel",
    "Isaac"
@@ -5266,6 +5927,7 @@
  },
  {
   "date": "2026-09-02",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Adam"
@@ -5279,6 +5941,7 @@
  },
  {
   "date": "2026-09-09",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5292,6 +5955,7 @@
  },
  {
   "date": "2026-09-09",
+  "location": "Swenson",
   "pair1": [
    "Bayley",
    "Josh"
@@ -5305,6 +5969,7 @@
  },
  {
   "date": "2026-09-09",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Adam"
@@ -5318,6 +5983,7 @@
  },
  {
   "date": "2026-09-09",
+  "location": "Swenson",
   "pair1": [
    "Milo",
    "Kasey"
@@ -5331,6 +5997,7 @@
  },
  {
   "date": "2026-09-09",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Milo"
@@ -5344,6 +6011,7 @@
  },
  {
   "date": "2026-09-09",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Josh"
@@ -5357,6 +6025,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Kasey",
    "Josh"
@@ -5370,6 +6039,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Allison"
@@ -5383,6 +6053,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Joe L.",
    "Frida"
@@ -5396,6 +6067,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Kasey",
    "Daniel"
@@ -5409,6 +6081,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Kate"
@@ -5422,6 +6095,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Joe L.",
    "Grady"
@@ -5435,6 +6109,7 @@
  },
  {
   "date": "2026-09-16",
+  "location": "Olin",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5448,6 +6123,7 @@
  },
  {
   "date": "2026-09-23",
+  "location": "Tredway",
   "pair1": [
    "Kasey",
    "Bayley"
@@ -5461,6 +6137,7 @@
  },
  {
   "date": "2026-09-23",
+  "location": "Tredway",
   "pair1": [
    "Chase",
    "Kate"
@@ -5474,6 +6151,7 @@
  },
  {
   "date": "2026-09-23",
+  "location": "Tredway",
   "pair1": [
    "Frida",
    "Adam"
@@ -5487,6 +6165,7 @@
  },
  {
   "date": "2026-09-23",
+  "location": "Tredway",
   "pair1": [
    "Kasey",
    "Chase"
@@ -5500,6 +6179,7 @@
  },
  {
   "date": "2026-09-23",
+  "location": "Tredway",
   "pair1": [
    "Primo",
    "Daniel"
@@ -5513,6 +6193,7 @@
  },
  {
   "date": "2026-09-23",
+  "location": "Tredway",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5526,6 +6207,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Primo",
    "Kate"
@@ -5539,6 +6221,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Milo",
    "Lukas"
@@ -5552,6 +6235,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Primo",
    "Kate"
@@ -5565,6 +6249,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Ben",
    "Chase"
@@ -5578,6 +6263,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Primo",
    "Milo"
@@ -5591,6 +6277,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Primo",
    "Lukas"
@@ -5604,6 +6291,7 @@
  },
  {
   "date": "2026-09-30",
+  "location": "Old Main",
   "pair1": [
    "Kate",
    "Daniel"
@@ -5617,6 +6305,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Kate",
    "Lukas"
@@ -5630,6 +6319,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Allison",
    "Chase"
@@ -5643,6 +6333,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Kate"
@@ -5656,6 +6347,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Kate"
@@ -5669,6 +6361,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Kasey",
    "Lukas"
@@ -5682,6 +6375,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Daniel",
    "Josh"
@@ -5695,6 +6389,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Kate"
@@ -5708,6 +6403,7 @@
  },
  {
   "date": "2026-10-07",
+  "location": "Swenson",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5721,6 +6417,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5734,6 +6431,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Adam",
    "Jaden"
@@ -5747,6 +6445,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Lukas",
    "Joe L."
@@ -5760,6 +6459,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Josh",
    "Ben G."
@@ -5773,6 +6473,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Kasey",
    "Primo"
@@ -5786,6 +6487,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5799,6 +6501,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Lukas",
    "Kate"
@@ -5812,6 +6515,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Ben G.",
    "Grady"
@@ -5825,6 +6529,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Ben G."
@@ -5838,6 +6543,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Daniel",
    "Adam"
@@ -5851,6 +6557,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Lukas",
    "Chase"
@@ -5864,6 +6571,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -5877,6 +6585,7 @@
  },
  {
   "date": "2026-10-14",
+  "location": "Brew",
   "pair1": [
    "Daniel",
    "Joe L."
@@ -5890,6 +6599,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Lukas",
    "Primo"
@@ -5903,6 +6613,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Milo",
    "Kate"
@@ -5916,6 +6627,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Daniel"
@@ -5929,6 +6641,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Lukas",
    "Kasey"
@@ -5942,6 +6655,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Lukas",
    "Grady"
@@ -5955,6 +6669,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Kate",
    "Primo"
@@ -5968,6 +6683,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Kate"
@@ -5981,6 +6697,7 @@
  },
  {
   "date": "2026-10-21",
+  "location": "Erickson",
   "pair1": [
    "Primo",
    "Kate"
@@ -5994,6 +6711,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Lukas",
    "Chase"
@@ -6007,6 +6725,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Grady"
@@ -6020,6 +6739,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Grady"
@@ -6033,6 +6753,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Adam",
    "Chase"
@@ -6046,6 +6767,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Lukas",
    "Chase"
@@ -6059,6 +6781,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Adam",
    "Primo"
@@ -6072,6 +6795,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Adam",
    "Kate"
@@ -6085,6 +6809,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Daniel",
    "Milo"
@@ -6098,6 +6823,7 @@
  },
  {
   "date": "2026-10-28",
+  "location": "Hanson",
   "pair1": [
    "Primo",
    "Grady"
@@ -6111,6 +6837,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Primo",
    "Ben G."
@@ -6124,6 +6851,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Kate",
    "Josh"
@@ -6137,6 +6865,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Jaden",
    "Ben G."
@@ -6150,6 +6879,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Allison"
@@ -6163,6 +6893,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Daniel",
    "Christian"
@@ -6176,6 +6907,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Kasey",
    "Adam"
@@ -6189,6 +6921,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Primo",
    "Jaden"
@@ -6202,6 +6935,7 @@
  },
  {
   "date": "2026-11-04",
+  "location": "Brunner",
   "pair1": [
    "Grady",
    "Milo"
@@ -6215,6 +6949,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Kasey"
@@ -6228,6 +6963,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Allison",
    "Grady"
@@ -6241,6 +6977,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Milo",
    "Kate"
@@ -6254,6 +6991,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Joe L."
@@ -6267,6 +7005,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Joe L."
@@ -6280,6 +7019,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Kasey",
    "Lukas"
@@ -6293,6 +7033,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Josh",
    "Ben G."
@@ -6306,6 +7047,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Primo",
    "Grady"
@@ -6319,6 +7061,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Kasey",
    "Lukas"
@@ -6332,6 +7075,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Ben G.",
    "Bayley"
@@ -6345,6 +7089,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Josh",
    "Milo"
@@ -6358,6 +7103,7 @@
  },
  {
   "date": "2026-11-11",
+  "location": "Brew",
   "pair1": [
    "Daniel",
    "Milo"
@@ -6371,6 +7117,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Kasey"
@@ -6384,6 +7131,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Milo",
    "Lukas"
@@ -6397,6 +7145,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Jaylee",
    "Josh"
@@ -6410,6 +7159,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Kate"
@@ -6423,6 +7173,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Kate",
    "Primo"
@@ -6436,6 +7187,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Milo",
    "Isaac"
@@ -6449,6 +7201,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Josh"
@@ -6462,6 +7215,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Josh",
    "Grady"
@@ -6475,6 +7229,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Jaylee",
    "Joe L."
@@ -6488,6 +7243,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Primo",
    "Grady"
@@ -6501,6 +7257,7 @@
  },
  {
   "date": "2026-11-18",
+  "location": "Bergendoff",
   "pair1": [
    "Kasey",
    "Josh"

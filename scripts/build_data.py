@@ -2,132 +2,148 @@
 Builds data/games.json for the GitHub Pages site. All stats (win %, point diff,
 teammate synergy, etc.) are computed client-side in JS from this file.
 
-Two modes:
-  python scripts/build_data.py            # default: merge the Fall 2026 sheet
-                                          #   into the existing games.json
-  python scripts/build_data.py --legacy   # rebuild from the old Euchre_Book.xlsx
-                                          #   ("The Book" sheet); overwrites
-                                          #   games.json, including manual edits
+    python scripts/build_data.py
 
-Merge mode keeps every existing game dated before the first date in the new
-sheet (so hand-fixes in games.json are preserved), drops any existing games on
-or after that date, and appends the new rows -- so it is safe to re-run as the
-season sheet grows.
+Reads every sheet in data/Euchre_Book.xlsx except "The Book" (the old master
+log, which is no longer maintained). Each sheet is one season or tournament.
+Columns are located by header name, so spacer columns and column order don't
+matter. Expected headers:
 
-Note: Euchre_Book_Fall_2026.csv is actually an .xlsx workbook despite the
-extension, so it is opened as a binary stream.
+    Date, Location, Partner Pair 1 Person 1, Partner Pair 1 Person 2,
+    Partner Pair 2 Person 1, Partner Pair 2 Person 2,
+    Final Score Pair 1, Final Score Pair 2, [Round]
+
+A sheet with a "Round" column is treated as a tournament: its games get
+"tournament" (the sheet name) and "round" fields. games.json is fully
+regenerated each run, so fix data in the spreadsheet, not in the JSON.
 """
 import json
 import sys
 from datetime import datetime, date as date_type
 import openpyxl
 
-SRC = r"C:\Users\primo\Downloads\Euchre_Book.xlsx"   # legacy master log
-NEW_SRC = "data/Euchre_Book_Fall_2026.csv"           # Fall 2026 workbook
-NEW_SHEET = "Euchre_Book_Fall_2026"
+SRC = "data/Euchre_Book.xlsx"
 OUT = "data/games.json"
+SKIP_SHEETS = {"The Book"}
 
-# Unambiguous cleanup: trailing/leading whitespace + a few obvious typos
-# confirmed against the roster (no other similarly-named player exists).
+COLS = {
+    "date": "Date",
+    "location": "Location",
+    "p1a": "Partner Pair 1 Person 1",
+    "p1b": "Partner Pair 1 Person 2",
+    "p2a": "Partner Pair 2 Person 1",
+    "p2b": "Partner Pair 2 Person 2",
+    "s1": "Final Score Pair 1",
+    "s2": "Final Score Pair 2",
+}
+
+# Unambiguous cleanup: obvious typos confirmed against the roster
+# (no other similarly-named player exists).
 NAME_FIXES = {
     "Done": "Don",
     "Jayleee": "Jaylee",
     "Niclole": "Nicole",
 }
 
-def clean_name(raw):
+# Normalize spelling variants of named tournament rounds.
+ROUND_FIXES = {
+    "semi-final": "Semi-Final",
+    "semi-finals": "Semi-Final",
+    "semifinal": "Semi-Final",
+    "semifinals": "Semi-Final",
+    "final": "Final",
+    "finals": "Final",
+}
+
+def clean_str(raw):
     if raw is None:
         return None
-    name = str(raw).strip()
-    return NAME_FIXES.get(name, name)
+    s = str(raw).strip()
+    return None if s == "" or s.upper() == "NULL" else s
+
+def clean_name(raw):
+    name = clean_str(raw)
+    return NAME_FIXES.get(name, name) if name else None
+
+def clean_round(raw):
+    if isinstance(raw, float) and raw.is_integer():
+        raw = int(raw)
+    if isinstance(raw, int):
+        return raw
+    s = clean_str(raw)
+    if s is None:
+        return None
+    if s.isdigit():
+        return int(s)
+    return ROUND_FIXES.get(s.lower(), s)
 
 def fmt_date(d):
     return d.strftime("%Y-%m-%d") if isinstance(d, (datetime, date_type)) else str(d)
 
-def load_fall_2026():
-    """Parse the Fall 2026 sheet: Date, Location, P1a, P1b, P2a, P2b, S1, S2."""
-    with open(NEW_SRC, "rb") as f:
-        wb = openpyxl.load_workbook(f, data_only=True)
-    ws = wb[NEW_SHEET]
+def find_header(ws):
+    """Return (header_row_number, {header_text: column_index})."""
+    for i, row in enumerate(ws.iter_rows(max_row=10, values_only=True), start=1):
+        cells = {str(v).strip(): j for j, v in enumerate(row) if v is not None}
+        if "Date" in cells:
+            return i, cells
+    return None, None
+
+def load_sheet(ws):
+    header_row, idx = find_header(ws)
+    if header_row is None:
+        print(f"  ! {ws.title}: no 'Date' header found, sheet skipped")
+        return [], 0
+    missing = [h for h in COLS.values() if h not in idx]
+    if missing:
+        sys.exit(f"Sheet '{ws.title}' is missing column(s): {', '.join(missing)}")
+    col = {k: idx[h] for k, h in COLS.items()}
+    round_col = idx.get("Round")
+
     games, skipped = [], 0
-    for row in ws.iter_rows(min_row=2, values_only=True):
-        date, _loc, p1a, p1b, p2a, p2b, s1, s2 = row[:8]
+    for row in ws.iter_rows(min_row=header_row + 1, values_only=True):
+        get = lambda k: row[col[k]] if col[k] < len(row) else None
+        date = get("date")
         if date is None:
             continue
-        players = [clean_name(x) for x in (p1a, p1b, p2a, p2b)]
+        players = [clean_name(get(k)) for k in ("p1a", "p1b", "p2a", "p2b")]
         try:
-            s1, s2 = int(s1), int(s2)
+            s1, s2 = int(get("s1")), int(get("s2"))
         except (TypeError, ValueError):
             skipped += 1
             continue
         if None in players:
             skipped += 1
             continue
-        games.append({
+        game = {
             "date": fmt_date(date),
+            "location": clean_str(get("location")),
             "pair1": players[:2],
             "pair2": players[2:],
             "score1": s1,
             "score2": s2,
-        })
+        }
+        if round_col is not None:
+            game["tournament"] = ws.title
+            game["round"] = clean_round(row[round_col] if round_col < len(row) else None)
+        games.append(game)
     return games, skipped
 
-def merge_fall_2026():
-    new, skipped = load_fall_2026()
-    if not new:
-        sys.exit("No games found in the Fall 2026 sheet; nothing changed.")
-    start = min(g["date"] for g in new)
-    with open(OUT, encoding="utf-8") as f:
-        existing = json.load(f)
-    kept = [g for g in existing if g["date"] < start]
-    replaced = len(existing) - len(kept)
-    games = kept + new  # stable sort keeps within-day order from the sheet
-    games.sort(key=lambda g: g["date"])
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(games, f, indent=1)
-    print(f"Kept {len(kept)} games before {start}, replaced {replaced}, "
-          f"added {len(new)} ({skipped} rows skipped). Total: {len(games)} -> {OUT}")
-
-def main_legacy():
-    wb = openpyxl.load_workbook(SRC, data_only=True)
-    ws = wb["The Book"]
-
-    games = []
-    skipped = 0
-    for row in ws.iter_rows(min_row=3, values_only=True):
-        date, _, p1a, p1b, _, p2a, p2b, _, s1, s2, _winner_col = row
-        if date is None:
-            continue
-        p1a, p1b, p2a, p2b = (clean_name(x) for x in (p1a, p1b, p2a, p2b))
-        if None in (p1a, p1b, p2a, p2b) or s1 is None or s2 is None:
-            skipped += 1
-            continue
-        try:
-            s1, s2 = int(s1), int(s2)
-        except (TypeError, ValueError):
-            skipped += 1
-            continue
-
-        games.append({
-            "date": fmt_date(date),
-            "pair1": [p1a, p1b],
-            "pair2": [p2a, p2b],
-            "score1": s1,
-            "score2": s2,
-        })
-
-    games.sort(key=lambda g: g["date"])
-
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(games, f, indent=1)
-
-    print(f"Wrote {len(games)} games to {OUT} ({skipped} rows skipped as incomplete)")
-
 def main():
-    if "--legacy" in sys.argv:
-        main_legacy()
-    else:
-        merge_fall_2026()
+    wb = openpyxl.load_workbook(SRC, data_only=True)
+    games, total_skipped = [], 0
+    for ws in wb.worksheets:
+        if ws.title in SKIP_SHEETS:
+            continue
+        sheet_games, skipped = load_sheet(ws)
+        total_skipped += skipped
+        print(f"  {ws.title}: {len(sheet_games)} games"
+              + (f" ({skipped} incomplete rows skipped)" if skipped else ""))
+        games.extend(sheet_games)
+
+    games.sort(key=lambda g: g["date"])  # stable: keeps within-day sheet order
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(games, f, indent=1)
+    print(f"Wrote {len(games)} games to {OUT} ({total_skipped} rows skipped)")
 
 if __name__ == "__main__":
     main()
