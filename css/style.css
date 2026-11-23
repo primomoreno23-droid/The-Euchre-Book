@@ -310,7 +310,7 @@ svg.chart .bar-dim { opacity: 0.4; }
 /* Profile grid */
 .profile-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
   align-items: start;
 }
@@ -333,6 +333,11 @@ svg.chart .bar-dim { opacity: 0.4; }
 .mini-list li:last-child { border-bottom: none; }
 .mini-list .mi-name { color: var(--text-primary); }
 .mini-list .mi-meta { color: var(--text-muted); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.mini-list .mi-sub { display: block; color: var(--text-muted); font-size: 0.72rem; margin-top: 1px; }
+
+/* Tournament games in the game log */
+.pill-tourney { background: transparent; border-color: var(--series-1); color: var(--series-1); }
+.round-label { color: var(--text-muted); font-size: 0.72rem; margin-top: 2px; }
 
 footer {
   text-align: center;

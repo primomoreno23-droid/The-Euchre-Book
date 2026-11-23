@@ -37,8 +37,21 @@
 
   function seasonSortKey(season) {
     const [name, year] = season.split(" ");
-    const order = { "Fall": 0, "J-Term": 1, "Spring": 2 };
+    // calendar order within a year: J-Term (Jan), Spring (Feb-Jul), Fall (Aug-Dec)
+    const order = { "J-Term": 0, "Spring": 1, "Fall": 2 };
     return parseInt(year, 10) * 10 + order[name];
+  }
+
+  // tournament round: numbers become "Round N", names ("Semi-Final", "Final") pass through
+  function fmtRound(round) {
+    return typeof round === "number" ? `Round ${round}` : String(round);
+  }
+
+  // [[location, gameCount], ...] for games with a known location, most-played first
+  function locationCounts(games) {
+    const m = new Map();
+    for (const g of games) if (g.location) m.set(g.location, (m.get(g.location) || 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   }
 
   function pairKey(a, b) {
@@ -570,6 +583,7 @@
       { label: "Players tracked", value: totalPlayers.toLocaleString() },
       { label: "Avg. margin of victory", value: avgMargin.toFixed(1) + " pts" },
       { label: "Seasons on record", value: String(seasons) },
+      { label: "Locations played", value: String(locationCounts(games).length) },
       { label: "Date range", value: fmtDate(minDate) + " – " + fmtDate(maxDate), small: true },
     ];
     tiles.innerHTML = tileData.map((t) =>
@@ -581,6 +595,15 @@
       .map(([label, value]) => ({ label, value }));
     drawVerticalBarChart(document.getElementById("season-chart"), seasonData);
     window.addEventListener("resize", debounce(() => drawVerticalBarChart(document.getElementById("season-chart"), seasonData), 150));
+
+    // games by location
+    const locData = locationCounts(games).map(([label, value]) => ({ label, value, sub: `${fmtPct(value / totalGames)} of all games` }));
+    const unknown = games.filter((g) => !g.location).length;
+    const note = document.getElementById("location-chart-note");
+    if (note && unknown) note.textContent = `(${unknown} games with no location recorded aren't shown)`;
+    const locSvg = document.getElementById("location-chart");
+    drawHorizontalBarChart(locSvg, locData, { valueFmt: (v) => `${v} games` });
+    window.addEventListener("resize", debounce(() => drawHorizontalBarChart(locSvg, locData, { valueFmt: (v) => `${v} games` }), 150));
   }
 
   function debounce(fn, ms) {
@@ -714,6 +737,14 @@
     refresh();
   }
 
+  // second line under a recent game: date · location (· tournament round)
+  function recentSub(g) {
+    const bits = [fmtDate(g.date)];
+    if (g.location) bits.push(g.location);
+    if (g.tournament) bits.push(g.round != null ? fmtRound(g.round) : g.tournament);
+    return `<span class="mi-sub">${bits.join(" · ")}</span>`;
+  }
+
   // ---------- Player profile ----------
   function renderProfile(playerStats, partnerStats, opponentStats, games) {
     const select = document.getElementById("profile-select");
@@ -747,8 +778,27 @@
         .sort((a, b) => a.winPct - b.winPct || b.games - a.games)
         .slice(0, 6);
 
+      const allPlayerGames = games.filter((g) => g.pair1.includes(name) || g.pair2.includes(name));
+
+      // record by location (min. 2 games there), most-played first
+      const locMap = new Map();
+      for (const g of allPlayerGames) {
+        if (!g.location) continue;
+        const won = g.pair1.includes(name) ? g.score1 > g.score2 : g.score2 > g.score1;
+        const s = locMap.get(g.location) || { loc: g.location, games: 0, wins: 0 };
+        s.games++; s.wins += won ? 1 : 0;
+        locMap.set(g.location, s);
+      }
+      const locations = [...locMap.values()]
+        .filter((s) => s.games >= 2)
+        .sort((a, b) => b.games - a.games || b.wins / b.games - a.wins / a.games)
+        .slice(0, 8);
+
+      // tournament games
+      const tourneyGames = allPlayerGames.filter((g) => g.tournament);
+
       // recent games
-      const playerGames = games.filter((g) => g.pair1.includes(name) || g.pair2.includes(name))
+      const playerGames = [...allPlayerGames]
         .sort((a, b) => b.dateObj - a.dateObj)
         .slice(0, 8)
         .map((g) => {
@@ -757,7 +807,7 @@
           const opp = onPair1 ? g.pair2 : g.pair1;
           const my = onPair1 ? g.score1 : g.score2;
           const their = onPair1 ? g.score2 : g.score1;
-          return { date: g.dateObj, partner, opp, my, their, win: my > their };
+          return { date: g.dateObj, partner, opp, my, their, win: my > their, location: g.location, tournament: g.tournament, round: g.round };
         });
 
       // cumulative diff chart
@@ -804,8 +854,22 @@
           </div>
           <div class="card">
             <h3>Recent games</h3>
-            ${playerGames.length ? `<ul class="mini-list">${playerGames.map((g) => `<li><span class="mi-name">${g.win ? "W" : "L"} vs ${g.opp.join(" & ")}</span><span class="mi-meta ${g.win ? "win-good" : ""}">${g.my}-${g.their}</span></li>`).join("")}</ul>` : ""}
+            ${playerGames.length ? `<ul class="mini-list">${playerGames.map((g) => `<li><span class="mi-name">${g.win ? "W" : "L"} vs ${g.opp.join(" & ")}${recentSub(g)}</span><span class="mi-meta ${g.win ? "win-good" : ""}">${g.my}-${g.their}</span></li>`).join("")}</ul>` : ""}
           </div>
+          <div class="card">
+            <h3>By location <span class="muted" style="font-weight:400">(min. 2 games)</span></h3>
+            ${locations.length ? `<ul class="mini-list">${locations.map((s) => `<li><span class="mi-name">${s.loc}</span><span class="mi-meta">${s.wins}-${s.games - s.wins} · ${fmtPct(s.wins / s.games)}</span></li>`).join("")}</ul>` : `<p class="empty-state">No location data yet.</p>`}
+          </div>
+          ${tourneyGames.length ? `
+          <div class="card">
+            <h3>Tournament games</h3>
+            <ul class="mini-list">${tourneyGames.map((g) => {
+              const onPair1 = g.pair1.includes(name);
+              const my = onPair1 ? g.score1 : g.score2, their = onPair1 ? g.score2 : g.score1;
+              const opp = onPair1 ? g.pair2 : g.pair1;
+              return `<li><span class="mi-name">${my > their ? "W" : "L"} vs ${opp.join(" & ")}<span class="mi-sub">${g.tournament}${g.round != null ? " · " + fmtRound(g.round) : ""}</span></span><span class="mi-meta ${my > their ? "win-good" : ""}">${my}-${their}</span></li>`;
+            }).join("")}</ul>
+          </div>` : ""}
         </div>
       `;
 
@@ -837,6 +901,8 @@
     const table = document.getElementById("games-table");
     const searchInput = document.getElementById("gl-search");
     const seasonSel = document.getElementById("gl-season");
+    const eventSel = document.getElementById("gl-event");
+    const locationSel = document.getElementById("gl-location");
     const countPill = document.getElementById("gl-count");
     const moreBtn = document.getElementById("gl-more");
     let pageSize = 25, shown = 25;
@@ -844,32 +910,62 @@
     const seasons = [...new Set(games.map((g) => g.season))].sort((a, b) => seasonSortKey(a) - seasonSortKey(b));
     seasonSel.innerHTML += seasons.map((s) => `<option value="${s}">${s}</option>`).join("");
 
+    // tournaments, in date order
+    const tournaments = [...new Set(games.filter((g) => g.tournament).map((g) => g.tournament))];
+    eventSel.innerHTML += tournaments.map((t) => `<option value="${t}">${t}</option>`).join("");
+
+    // locations, most-played first
+    const locCounts = locationCounts(games);
+    locationSel.innerHTML += locCounts.map(([loc, n]) => `<option value="${loc}">${loc} (${n})</option>`).join("")
+      + (games.some((g) => !g.location) ? `<option value="__unknown">Unknown</option>` : "");
+
     function toRow(g) {
       const winner = g.score1 > g.score2 ? g.pair1 : g.pair2;
       return { ...g, winnerLabel: winner.join(" & ") };
     }
 
+    function matchesEvent(g, ev) {
+      if (!ev) return true;
+      if (ev === "__regular") return !g.tournament;
+      if (ev === "__tournament") return !!g.tournament;
+      return g.tournament === ev;
+    }
+
+    function matchesLocation(g, loc) {
+      if (!loc) return true;
+      if (loc === "__unknown") return !g.location;
+      return g.location === loc;
+    }
+
     function getRows() {
       const q = searchInput.value.trim().toLowerCase();
-      const season = seasonSel.value;
+      const season = seasonSel.value, ev = eventSel.value, loc = locationSel.value;
       return games
         .filter((g) => (!season || g.season === season))
-        .filter((g) => q === "" || [...g.pair1, ...g.pair2].some((n) => n.toLowerCase().includes(q)))
+        .filter((g) => matchesEvent(g, ev))
+        .filter((g) => matchesLocation(g, loc))
+        .filter((g) => q === "" || [...g.pair1, ...g.pair2, g.location || ""].some((n) => n.toLowerCase().includes(q)))
         .map(toRow);
     }
 
     const columns = [
       { key: "date", sort: (r) => r.dateObj },
       { key: "season", sort: (r) => seasonSortKey(r.season) },
+      // unknown locations sort after every named one when descending
+      { key: "location", sort: (r) => (r.location || "").toLowerCase() },
       { key: "score1", sort: (r) => r.score1 },
       { key: "score2", sort: (r) => r.score2 },
     ];
 
     function renderRow(r) {
       const tr = document.createElement("tr");
+      const eventCell = r.tournament
+        ? `<span class="pill pill-tourney" title="${r.tournament}">${r.tournament}</span>${r.round != null ? `<div class="round-label">${fmtRound(r.round)}</div>` : ""}`
+        : `<span class="pill">${r.season}</span>`;
       tr.innerHTML = `
         <td>${fmtDate(r.dateObj)}</td>
-        <td><span class="pill">${r.season}</span></td>
+        <td>${eventCell}</td>
+        <td>${r.location ? r.location : `<span class="muted">—</span>`}</td>
         <td class="name-cell">${r.pair1.join(" & ")}</td>
         <td class="${r.score1 > r.score2 ? "win-good" : ""}">${r.score1}</td>
         <td class="name-cell">${r.pair2.join(" & ")}</td>
@@ -905,7 +1001,7 @@
       if (slice.length === 0) {
         const tr = document.createElement("tr");
         const td = document.createElement("td");
-        td.colSpan = 7; td.className = "empty-state"; td.textContent = "No matching games.";
+        td.colSpan = 8; td.className = "empty-state"; td.textContent = "No matching games.";
         tr.appendChild(td); tbody.appendChild(tr);
       } else {
         slice.forEach((r) => tbody.appendChild(renderRow(r)));
@@ -915,7 +1011,9 @@
     }
 
     searchInput.addEventListener("input", () => { shown = pageSize; refresh(); });
-    seasonSel.addEventListener("change", () => { shown = pageSize; refresh(); });
+    for (const sel of [seasonSel, eventSel, locationSel]) {
+      sel.addEventListener("change", () => { shown = pageSize; refresh(); });
+    }
     moreBtn.addEventListener("click", () => { shown += pageSize; refresh(); });
 
     refresh();
