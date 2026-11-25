@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Seasonal theme: Thanksgiving (harvest colors + a few autumn touches)
+
+   Layered on top of css/style.css. It only overrides the color tokens and
+   adds decorations; no layout lives here. To turn it off, delete the
+   <link ... css/themes/thanksgiving.css> line in each HTML page
+   (index, teammates, profile, games). To swap seasons, add a new file in
+   css/themes/ that defines the same tokens and point those links at it.
+
+   Every token is redefined in light AND dark mode. That's required: this
+   file's light-mode :root block loads after the base dark-mode block, so
+   leaving a token out of the dark blocks below would leak light colors
+   into dark mode.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+  --surface-1:      #fffaf3;   /* cream */
+  --surface-2:      #f7eee1;   /* parchment */
+  --text-primary:   #2b1d12;   /* roasted brown */
+  --text-secondary: #5e4633;
+  --text-muted:     #8f7863;
+  --gridline:       #ecdcc6;
+  --baseline:       #cfb592;
+  --border:         rgba(90,50,20,0.14);
+  --series-1:       #b9581a;   /* pumpkin */
+  --series-1-wash:  rgba(185,88,26,0.10);
+  --series-8:       #9e2a3a;   /* cranberry, negative values */
+  --good:           #4a6b1f;   /* sage/olive */
+  --card-shadow:    0 1px 3px rgba(90,50,20,0.08);
+
+  /* theme-only tokens */
+  --tg-gold:        #d99a2b;
+  --tg-header-bg:   linear-gradient(180deg, #fff4e4 0%, #fffaf3 100%);
+  --tg-leaf-opacity: 0.12;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1:      #251a12;
+    --surface-2:      #17100a;
+    --text-primary:   #fbf3e8;
+    --text-secondary: #d8c4ab;
+    --text-muted:     #a08a73;
+    --gridline:       #3a2b1f;
+    --baseline:       #4d3a29;
+    --border:         rgba(255,225,190,0.12);
+    --series-1:       #e8843a;
+    --series-1-wash:  rgba(232,132,58,0.16);
+    --series-8:       #e2636f;
+    --good:           #8dbd52;
+    --card-shadow:    0 1px 2px rgba(0,0,0,0.45);
+    --tg-gold:        #e9b04a;
+    --tg-header-bg:   linear-gradient(180deg, #2e1f14 0%, #251a12 100%);
+    --tg-leaf-opacity: 0.16;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1:      #251a12;
+  --surface-2:      #17100a;
+  --text-primary:   #fbf3e8;
+  --text-secondary: #d8c4ab;
+  --text-muted:     #a08a73;
+  --gridline:       #3a2b1f;
+  --baseline:       #4d3a29;
+  --border:         rgba(255,225,190,0.12);
+  --series-1:       #e8843a;
+  --series-1-wash:  rgba(232,132,58,0.16);
+  --series-8:       #e2636f;
+  --good:           #8dbd52;
+  --card-shadow:    0 1px 2px rgba(0,0,0,0.45);
+  --tg-gold:        #e9b04a;
+  --tg-header-bg:   linear-gradient(180deg, #2e1f14 0%, #251a12 100%);
+  --tg-leaf-opacity: 0.16;
+}
+
+/* ---- Header: warm gradient, scattered leaves, harvest stripe ----------- */
+header.site-header {
+  position: relative;
+  background: var(--tg-header-bg);
+  border-bottom: 0;
+  overflow: hidden;
+}
+/* faint leaves drifting across the header (decorative only) */
+header.site-header::before {
+  content: "🍂        🍁            🍂      🍁          🍂            🍁     🍂";
+  position: absolute;
+  inset: 8px 0 auto 0;
+  white-space: pre;
+  font-size: 1.6rem;
+  letter-spacing: 0.4em;
+  text-align: right;
+  opacity: var(--tg-leaf-opacity);
+  pointer-events: none;
+  transform: rotate(-4deg);
+}
+/* cranberry → pumpkin → gold → sage stripe along the bottom */
+header.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--series-8), var(--series-1), var(--tg-gold), var(--good));
+}
+.site-header .wrap { position: relative; } /* sit above the leaves */
+.site-header h1::after {
+  content: " ";
+  font-size: 0.9em;
+}
+
+/* ---- Small accents ----------------------------------------------------- */
+section h2 {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--tg-gold);
+}
+.photo-banner { box-shadow: 0 0 0 3px var(--tg-gold), var(--card-shadow); }
+.pill-tourney { border-color: var(--tg-gold); }
+
+footer::before {
+  content: "🍁 Happy Thanksgiving from the QC Euchre Club 🍁";
+  display: block;
+  margin-bottom: 6px;
+  color: var(--series-1);
+  font-weight: 600;
+}
