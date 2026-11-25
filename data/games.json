@@ -7268,5 +7268,215 @@
   ],
   "score1": 7,
   "score2": 12
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Primo",
+   "Ben G."
+  ],
+  "pair2": [
+   "Kasey",
+   "AJ"
+  ],
+  "score1": 10,
+  "score2": 5
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Kate",
+   "Chase"
+  ],
+  "pair2": [
+   "Daniel",
+   "Grady"
+  ],
+  "score1": 10,
+  "score2": 8
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Primo",
+   "Grady"
+  ],
+  "pair2": [
+   "Kate",
+   "Daniel"
+  ],
+  "score1": 6,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Elizabeth",
+   "Chase"
+  ],
+  "pair2": [
+   "Frida",
+   "AJ"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Christian",
+   "Milo"
+  ],
+  "pair2": [
+   "Kasey",
+   "Ben G."
+  ],
+  "score1": 6,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Grady",
+   "Primo"
+  ],
+  "pair2": [
+   "Chase",
+   "Adam"
+  ],
+  "score1": 8,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Kate",
+   "Daniel"
+  ],
+  "pair2": [
+   "AJ",
+   "Frida"
+  ],
+  "score1": 12,
+  "score2": 6
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Christian",
+   "Kasey"
+  ],
+  "pair2": [
+   "Milo",
+   "Ben G."
+  ],
+  "score1": 11,
+  "score2": 4
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Primo",
+   "Chase"
+  ],
+  "pair2": [
+   "Milo",
+   "Christian"
+  ],
+  "score1": 13,
+  "score2": 3
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Kasey",
+   "Adam"
+  ],
+  "pair2": [
+   "Ben G.",
+   "AJ"
+  ],
+  "score1": 10,
+  "score2": 3
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Kate",
+   "Daniel"
+  ],
+  "pair2": [
+   "Grady",
+   "Frida"
+  ],
+  "score1": 9,
+  "score2": 10
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "AJ",
+   "Adam"
+  ],
+  "pair2": [
+   "Kasey",
+   "Ben G."
+  ],
+  "score1": 10,
+  "score2": 8
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Chase",
+   "Milo"
+  ],
+  "pair2": [
+   "Christian",
+   "Daniel"
+  ],
+  "score1": 4,
+  "score2": 13
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Grady",
+   "Frida"
+  ],
+  "pair2": [
+   "Kate",
+   "Primo"
+  ],
+  "score1": 6,
+  "score2": 11
+ },
+ {
+  "date": "2026-11-23",
+  "location": "Lindberg",
+  "pair1": [
+   "Christian",
+   "Daniel"
+  ],
+  "pair2": [
+   "Chase",
+   "Kasey"
+  ],
+  "score1": 10,
+  "score2": 7
  }
 ]
