@@ -91,6 +91,7 @@
     } else if (page === "profile") {
       renderProfile(playerStats, partnerStats, opponentStats, games);
     } else if (page === "games") {
+      renderChampions(games);
       renderGameLog(games);
     }
   }
@@ -949,6 +950,87 @@
     const wanted = new URLSearchParams(window.location.search).get("player");
     const initial = names.includes(wanted) ? wanted : names[0];
     if (initial) { select.value = initial; render(initial); }
+  }
+
+  // ---------- Season champions ----------
+  // Ranking: most wins, then highest total point diff, then fewest losses.
+  // Tournament games are excluded. Players still tied on all three share the spot.
+  function compareStanding(a, b) {
+    return b.wins - a.wins || b.diffSum - a.diffSum || a.losses - b.losses;
+  }
+
+  function seasonStandings(games) {
+    const bySeason = new Map(); // season -> Map(name -> {name,wins,losses,diffSum,games})
+    for (const g of games) {
+      if (g.tournament) continue;
+      if (!bySeason.has(g.season)) bySeason.set(g.season, new Map());
+      const m = bySeason.get(g.season);
+      const diff1 = g.score1 - g.score2;
+      for (const [pair, diff] of [[g.pair1, diff1], [g.pair2, -diff1]]) {
+        for (const name of pair) {
+          const s = m.get(name) || { name, wins: 0, losses: 0, diffSum: 0, games: 0 };
+          s.games++; s.diffSum += diff;
+          if (diff > 0) s.wins++; else s.losses++;
+          m.set(name, s);
+        }
+      }
+    }
+    // season -> [[tied players at rank 1], [rank 2], ...]
+    const out = new Map();
+    for (const [season, m] of bySeason) {
+      const sorted = [...m.values()].sort((a, b) => compareStanding(a, b) || a.name.localeCompare(b.name));
+      const tiers = [];
+      for (const s of sorted) {
+        const last = tiers[tiers.length - 1];
+        if (last && compareStanding(last[0], s) === 0) last.push(s);
+        else tiers.push([s]);
+      }
+      out.set(season, tiers);
+    }
+    return out;
+  }
+
+  function renderChampions(games) {
+    const grid = document.getElementById("champ-grid");
+    if (!grid) return;
+    const standings = seasonStandings(games);
+    const currentSeason = seasonOf(new Date());
+    const seasons = [...standings.keys()].sort((a, b) => seasonSortKey(b) - seasonSortKey(a));
+    const link = (s) => `<a href="profile.html?player=${encodeURIComponent(s.name)}">${s.name}</a>`;
+    const statLine = (s) => `${s.wins}-${s.losses} · ${fmtSignedInt(s.diffSum)} pts`;
+
+    grid.innerHTML = seasons.map((season) => {
+      const tiers = standings.get(season);
+      const inProgress = season === currentSeason;
+      const champs = tiers[0];
+      // runners-up: next two places (a tie counts as one place)
+      const runners = [];
+      let place = 1 + champs.length;
+      for (const tier of tiers.slice(1)) {
+        if (runners.length >= 2) break;
+        runners.push({ place, tier });
+        place += tier.length;
+      }
+      const gameCount = games.filter((g) => !g.tournament && g.season === season).length;
+      return `
+        <div class="card champ-card${inProgress ? " champ-live" : ""}">
+          <div class="champ-head">
+            <span class="champ-season">${season}</span>
+            <span class="pill">${inProgress ? "In progress" : `${gameCount} games`}</span>
+          </div>
+          <div class="champ-label">${inProgress ? "Current leader" : champs.length > 1 ? "Co-champions" : "Champion"}</div>
+          <div class="champ-name">${champs.map(link).join(" &amp; ")}</div>
+          <div class="champ-stat">${statLine(champs[0])}</div>
+          ${runners.length ? `<ul class="mini-list champ-runners">${runners.map((r) =>
+            `<li><span class="mi-name">${ordinal(r.place)}${r.tier.length > 1 ? " (tie)" : ""} · ${r.tier.map(link).join(", ")}</span><span class="mi-meta">${statLine(r.tier[0])}</span></li>`
+          ).join("")}</ul>` : ""}
+        </div>`;
+    }).join("");
+  }
+
+  function ordinal(n) {
+    const s = ["th", "st", "nd", "rd"], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
   // ---------- Game log ----------

@@ -339,6 +339,23 @@ svg.chart .bar-dim { opacity: 0.4; }
 .pill-tourney { background: transparent; border-color: var(--series-1); color: var(--series-1); }
 .round-label { color: var(--text-muted); font-size: 0.72rem; margin-top: 2px; }
 
+/* Season champions */
+.champ-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.champ-card { border-top: 3px solid var(--series-1); }
+.champ-card.champ-live { border-top-style: dashed; }
+.champ-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
+.champ-season { font-weight: 600; font-size: 0.9rem; color: var(--text-secondary); }
+.champ-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+.champ-name { font-size: 1.35rem; font-weight: 700; margin: 2px 0; line-height: 1.25; }
+.champ-stat { font-size: 0.82rem; color: var(--text-secondary); font-variant-numeric: tabular-nums; margin-bottom: 10px; }
+.champ-card a { color: inherit; text-decoration: none; }
+.champ-card a:hover { color: var(--series-1); text-decoration: underline; }
+.champ-runners { border-top: 1px solid var(--gridline); }
+
 /* small-sample rows (e.g. a location a player has barely played at) */
 tr.row-dim td { opacity: 0.5; }
 
