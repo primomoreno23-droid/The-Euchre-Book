@@ -53,8 +53,8 @@ corrections in the spreadsheet, not in the JSON.
 
 ### Updating the photo banner
 
-The rotating banner at the top of every page shows the photos listed in
-`js/banner.js`. To add one:
+The rotating banner at the top of the Overview & Leaderboard page shows the
+photos listed in `js/banner.js`. To add one:
 
 1. Put the photo in `visuals/`.
 2. Run `python scripts/build_photos.py`. It writes a resized copy to

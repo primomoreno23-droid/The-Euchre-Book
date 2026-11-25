@@ -1,4 +1,4 @@
-/* Rotating photo banner shown at the top of every page.
+/* Rotating photo banner at the top of the Overview & Leaderboard page (index.html).
    To add a photo: drop it in visuals/, run `python scripts/build_photos.py`,
    then add an entry below (file name in visuals/web/ + caption). */
 (function () {
