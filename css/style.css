@@ -339,6 +339,67 @@ svg.chart .bar-dim { opacity: 0.4; }
 .pill-tourney { background: transparent; border-color: var(--series-1); color: var(--series-1); }
 .round-label { color: var(--text-muted); font-size: 0.72rem; margin-top: 2px; }
 
+/* Rotating photo banner (js/banner.js) */
+.photo-banner {
+  position: relative;
+  height: clamp(200px, 34vw, 360px);
+  margin-bottom: 36px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: var(--card-shadow);
+}
+.pb-track, .pb-slide { position: absolute; inset: 0; margin: 0; }
+.pb-slide { opacity: 0; transition: opacity 0.8s ease; }
+.pb-slide.active { opacity: 1; }
+/* blurred, zoomed copy fills the frame; the sharp photo sits on top uncropped */
+.pb-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  filter: blur(24px) brightness(0.6);
+  transform: scale(1.15);
+}
+.pb-fg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain;
+}
+.pb-slide figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 28px 16px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.pb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px;
+  border: 0; border-radius: 50%;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 1.5rem; line-height: 1;
+  cursor: pointer;
+  opacity: 0; transition: opacity 0.2s;
+}
+.pb-prev { left: 10px; }
+.pb-next { right: 10px; }
+.photo-banner:hover .pb-nav, .pb-nav:focus-visible { opacity: 1; }
+.pb-nav:hover { background: rgba(0,0,0,0.65); }
+@media (hover: none) { .pb-nav { opacity: 0.8; } }
+.pb-dots {
+  position: absolute; right: 14px; bottom: 12px;
+  display: flex; gap: 6px;
+}
+.pb-dot {
+  width: 8px; height: 8px; padding: 0;
+  border: 0; border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  cursor: pointer;
+}
+.pb-dot[aria-current="true"] { background: #fff; }
+@media (prefers-reduced-motion: reduce) { .pb-slide { transition: none; } }
+
 /* Season champions */
 .champ-grid {
   display: grid;

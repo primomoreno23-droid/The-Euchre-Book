@@ -51,7 +51,20 @@ games also get `tournament` (the sheet name) and `round` (a number, or
 "Semi-Final" / "Final"). `games.json` is fully regenerated each run, so make
 corrections in the spreadsheet, not in the JSON.
 
-The script trims stray whitespace from names and fixes a few confirmed one-off
+### Updating the photo banner
+
+The rotating banner at the top of every page shows the photos listed in
+`js/banner.js`. To add one:
+
+1. Put the photo in `visuals/`.
+2. Run `python scripts/build_photos.py`. It writes a resized copy to
+   `visuals/web/` with all metadata (including phone GPS location) removed.
+3. Add `{ file: "<name>.jpg", caption: "..." }` to the `PHOTOS` list in
+   `js/banner.js`.
+
+### Name cleanup
+
+The data script trims stray whitespace from names and fixes a few confirmed one-off
 typos ("Done" → "Don", "Jayleee" → "Jaylee", "Niclole" → "Nicole"); it does not
 attempt to merge other similarly-spelled names (e.g. "Lucas" vs "Lukas") since
 those may be different people.
